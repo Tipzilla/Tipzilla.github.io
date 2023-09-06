@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starlight</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet"/>
+</head>
+<body>
+<!----- header ----->
+    <header class="header">
+        <div class="header-wrapper">
+            <div class="header-logo">
+                <a href="index.html"><img src="images/logo.png" width="125"></a>
+            </div>
+            <div class="header-text">
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="store.html">Store</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <img src="images/menu.png" class="header-menu-icon" onclick="menutoggle()">
+          </div>
+        </div>
+        <hr>
+    </header>
+<!----- store-1 ----->
+    <div class="store-1">
+        <div class="store-1-container">
+            <h1 class="store-1-title">Store</h1>
+            <p class="store-1-subtitle">Find us easily! Explore our store's location on the embedded Google Map below for a hassle-free visit.</p>
+            <iframe class="store-1-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3389.13229635714!2d175.28040481697232!3d-37.78880093177154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d6d18a57fa16281%3A0x72b05e2e8812d179!2sWintec%20Te%20P%C5%ABkenga%20City%20Campus!5e0!3m2!1sen!2snz!4v1693260556443!5m2!1sen!2snz" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+<!----- trusted brands ----->
+    <div class="brands">
+        <div class="brands-container">
+            <h2 class="brands-title">Trusted by</h2>
+            <div class="brands-col">
+                <a href="https://www.paypal.com/"><img src="images/logo-paypal.png"></a>
+            </div>
+            <div class="brands-col">
+                <a href="https://www.nasa.gov/"><img src="images/logo-nasa.png" height="50"></a>
+            </div>
+            <div class="brands-col">
+                <a href="https://www.lego.com/"><img src="images/logo-lego.png"></a>
+            </div>
+            <div class="brands-col">
+                <a href="https://www.coke.co.nz/"><img src="images/logo-coca-cola.png"></a>
+            </div>
+            <div class="brands-col">
+                <a href="https://www.philips.com/"><img src="images/logo-philips.png"></a>
+            </div>
+        </div>
+    </div>
+<!----- store-2 ----->
+    <div class="store-2">
+        <div class="store-2-row store-2-row-2">
+            <h1>All Products</h1>
+        </div>
+        <div class="store-2-row">
+            <div class="store-2-col">
+                <img src="images/product-1.png">
+                <h4>SpaceGuard&#8482;</h4>
+                <small>Uncompromised safety, visionary engineering, and seamless data connectivity to redefine space journeys.</small>
+                <div class="store-2-rating">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                </div>
+                <p>$2,499.99</p>
+                <div class="popup-container">
+                    <a class="store-2-btn" onclick="togglePopup(this)">Buy Now &#8594;</a>
+                    <span class="popuptext">Coming Soon!</span>
+                </div>
+            </div>
+            <div class="store-2-col">
+                <div class="store-2-image-container">
+                <img src="images/product-2.png">
+                <div class="store-2-finance-label">
+                <div class="popup-container">
+                    <p onclick="togglePopup(this)">Finance Available!</p>
+                    <span class="popuptext">Coming Soon!</span>
+                </div>
+                </div>
+                </div>
+                <h4>VoyagerEx&#8482;</h4>
+                <small>Uniting lightweight durability, thermal comfort, and seamless communication, it redefines exploration beyond Earth.</small>
+                <div class="store-2-rating">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                </div>
+                <p>$4,999.99</p>
+                <div class="popup-container">
+                    <a class="store-2-btn" onclick="togglePopup(this)">Buy Now &#8594;</a>
+                    <span class="popuptext">Coming Soon!</span>
+                </div>
+            </div>
+            <div class="store-2-col">
+                <img src="images/product-3.png">
+                <h4>StellarStride&#8482;</h4>
+                <small>Engineered for celestial explorers. Ensuring secure footing on alien terrains, while tech enhances endurance and protection.</small>
+                <div class="store-2-rating">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                </div>
+                <p>$799.99</p>
+                <div class="popup-container">
+                    <a class="store-2-btn" onclick="togglePopup(this)">Buy Now &#8594;</a>
+                    <span class="popuptext">Coming Soon!</span>
+                </div>
+            </div>
+            <div class="store-2-col">
+                <div class="store-2-image-container">
+                <img src="images/product-4.png">
+                <div class="store-2-finance-label">
+                <div class="popup-container">
+                    <p onclick="togglePopup(this)">Finance Available!</p>
+                    <span class="popuptext">Coming Soon!</span>
+                </div>
+                </div>
+                </div>
+                <h4>AeroJet XE-1&#8482;</h4>
+                <small>Precise control and unmatched innovation redefine human mobility for urban commuting and adventurous exploration.</small>
+                <div class="store-2-rating">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                </div>
+                <p>$12,999.99</p>
+                <div class="popup-container">
+                    <a class="store-2-btn" onclick="togglePopup(this)">Buy Now &#8594;</a>
+                    <span class="popuptext">Coming Soon!</span>
+                </div>
+            </div>
+            <div class="store-2-col">
+                <img src="images/product-5.png">
+                <h4>AstroNav GPS Navigator&#8482;</h4>
+                <small>This advanced navigation system brings accuracy, reliability, and innovation to interstellar journeys like never before.</small>
+                <div class="store-2-rating">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                </div>
+                <p>$799.99</p>
+                <div class="popup-container">
+                    <a class="store-2-btn" onclick="togglePopup(this)">Buy Now &#8594;</a>
+                    <span class="popuptext">Coming Soon!</span>
+                </div>
+            </div>
+            <div class="store-2-col">
+                <div class="store-2-image-container">
+                <img src="images/product-6.png">
+                <div class="store-2-finance-label">
+                <div class="popup-container">
+                    <p onclick="togglePopup(this)">Finance Available!</p>
+                    <span class="popuptext">Coming Soon!</span>
+                </div>
+                </div>
+                </div>
+                <h4>QuantumLeap Engine&#8482;</h4>
+                <small>A technological marvel that pushes the boundaries of space travel. Propel yourself beyond the limits and into the cosmos!</small>
+                <div class="store-2-rating">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                </div>
+                <p>$999,999.99</p>
+                <div class="popup-container">
+                    <a class="store-2-btn" onclick="togglePopup(this)">Buy Now &#8594;</a>
+                    <span class="popuptext">Coming Soon!</span>
+                </div>
+            </div>
+            <div class="store-2-col">
+                <img src="images/product-7.png">
+                <h4>NebulaDream Sleep Pods&#8482;</h4>
+                <small>Immerse yourself in a cocoon of comfort, specially designed for rejuvenating sleep in the boundless expanse of space.</small>
+                <div class="store-2-rating">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                </div>
+                <p>$1,499.99</p>
+                <div class="popup-container">
+                    <a class="store-2-btn" onclick="togglePopup(this)">Buy Now &#8594;</a>
+                    <span class="popuptext">Coming Soon!</span>
+                </div>
+            </div>
+            <div class="store-2-col">
+                <div class="store-2-image-container">
+                <img src="images/product-8.png">
+                <div class="store-2-finance-label">
+                <div class="popup-container">
+                    <p onclick="togglePopup(this)">Finance Available!</p>
+                    <span class="popuptext">Coming Soon!</span>
+                </div>
+                </div>
+                </div>
+                <h4>Environmental ExoSuit&#8482;</h4>
+                <small>Your companion for venturing into the harshest and most extreme conditions, enhancing your exploration experience.</small>
+                <div class="store-2-rating">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                </div>
+                <p>$2,599.99</p>
+                <div class="popup-container">
+                    <a class="store-2-btn" onclick="togglePopup(this)">Buy Now &#8594;</a>
+                    <span class="popuptext">Coming Soon!</span>
+                </div>
+            </div>
+            <div class="store-2-col">
+                <img src="images/product-9.png">
+                <h4>Bioluminescent Plant Kit&#8482;</h4>
+                <small>Illuminate your living space - experience the magic of bioluminescence as you cultivate your own otherworldly oasis.</small>
+                <div class="store-2-rating">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                </div>
+                <p>$149.99</p>
+                <div class="popup-container">
+                    <a class="store-2-btn" onclick="togglePopup(this)">Buy Now &#8594;</a>
+                    <span class="popuptext">Coming Soon!</span>
+                </div>
+            </div>
+            <div class="store-2-col">
+                <img src="images/product-10.png">
+                <h4>Cosmic Radiation Vest&#8482;</h4>
+                <small>To protect astronauts and space explorers, this vest ensures your safety amidst the cosmic challenges of radiation.</small>
+                <div class="store-2-rating">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                </div>
+                <p>$799.99</p>
+                <div class="popup-container">
+                    <a class="store-2-btn" onclick="togglePopup(this)">Buy Now &#8594;</a>
+                    <span class="popuptext">Coming Soon!</span>
+                </div>
+            </div>
+            <div class="store-2-col">
+                <img src="images/product-11.png">
+                <h4>SV ProBinoculars&#8482;</h4>
+                <small>Crafted for avid stargazers and astronomy enthusiasts, these binoculars offer a gateway to wonders like never before.</small>
+                <div class="store-2-rating">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                </div>
+                <p>$399.99</p>
+                <div class="popup-container">
+                    <a class="store-2-btn" onclick="togglePopup(this)">Buy Now &#8594;</a>
+                    <span class="popuptext">Coming Soon!</span>
+                </div>
+            </div>
+            <div class="store-2-col">
+                <div class="store-2-image-container">
+                <img src="images/product-12.png">
+                <div class="store-2-finance-label">
+                <div class="popup-container">
+                    <p onclick="togglePopup(this)">Finance Available!</p>
+                    <span class="popuptext">Coming Soon!</span>
+                </div>
+                </div>
+                </div>
+                <h4>LevitaGravity Capsules&#8482;</h4>
+                <small>Experience the sensation of weightlessness and redefine the boundaries of human movement in the cosmos.</small>
+                <div class="store-2-rating">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                </div>
+                <p>$2,999.99</p>
+                <div class="popup-container">
+                    <a class="store-2-btn" onclick="togglePopup(this)">Buy Now &#8594;</a>
+                    <span class="popuptext">Coming Soon!</span>
+                </div>
+            </div>
+        </div>
+    </div>
+<!----- testimonials ----->
+    <section class="test-container">
+      <div class="testimonial mySwiper">
+        <div class="testi-content swiper-wrapper">
+          <div class="slide swiper-slide">
+            <img src="images/profile-1.png" alt="" class="image"/>
+            <p>Scored some sharp starship decals and a killer blaster holster from this site. Impressed by the quick delivery and top-notch quality. They even tossed in a Wookiee-sized bag of space jerky as a bonus. If it's got my seal of approval, you're good to go.</p>
+            <i class="bx bxs-quote-alt-left quote-icon"></i>
+            <div class="details">
+              <span class="name">Han Solo</span>
+              <span class="job">Smuggler</span>
+            </div>
+          </div>
+          <div class="slide swiper-slide">
+            <img src="images/profile-2.png" alt="" class="image"/>
+            <p>Mesa ordered some gungan tech doodads, and boy oh boy, theysa delivered big time. The podracer engine stabilizer? Utter perfection! And the underwater breathing apparatus? Muy muy useful! If yousa need gungan gear, thissa website is where yousa wanna go. Mesa lovin' it!</p>
+            <i class="bx bxs-quote-alt-left quote-icon"></i>
+            <div class="details">
+              <span class="name">Jar-Jar Binks</span>
+              <span class="job">Gungan Military Commander</span>
+            </div>
+          </div>
+          <div class="slide swiper-slide">
+            <img src="images/profile-3.png" alt="" class="image"/>
+            <p>Having acquired lightsaber components and a Jedi robe from this website, I'm impressed by their quality and authenticity. In a realm with limited reliable sources, this platform stands out for its craftsmanship and prompt service. May the Force be with those who choose this site for their Jedi gear needs.</p>
+            <i class="bx bxs-quote-alt-left quote-icon"></i>
+            <div class="details">
+              <span class="name">Obi-Wan Kenobi</span>
+              <span class="job">Jedi Master</span>
+            </div>
+          </div>
+          <div class="slide swiper-slide">
+            <img src="images/profile-4.png" alt="" class="image"/>
+            <p>Beep beep, whirr!</p>
+            <i class="bx bxs-quote-alt-left quote-icon"></i>
+            <div class="details">
+              <span class="name">R2-D2</span>
+              <span class="job">Astromech Droid</span>
+            </div>
+          </div>
+          <div class="slide swiper-slide">
+            <img src="images/profile-5.png" alt="" class="image"/>
+            <p>I recently scored some awesome pilot gear from this website. The flight helmet fits like a dream and the blaster holster is on point. The rebel insignia patches I got add that extra touch of camaraderie. If you're taking to the skies like me, this site's a must-visit. May the Force be with you out there!</p>
+            <i class="bx bxs-quote-alt-left quote-icon"></i>
+            <div class="details">
+              <span class="name">Luke Skywalker</span>
+              <span class="job">Rebel Pilot</span>
+            </div>
+          </div>
+          <div class="slide swiper-slide">
+            <img src="images/profile-6.png" alt="" class="image"/>
+            <p>The diplomatic gown I received is elegant and regal, perfect for representing the Rebel Alliance. The blaster holster is practical and stylish, ready for action. And the hair accessories? They capture that iconic Alderaanian look. For fellow leaders and rebels, this site offers quality gear to match the mission. Stay strong, and may hope guide you.</p>
+            <i class="bx bxs-quote-alt-left quote-icon"></i>
+            <div class="details">
+              <span class="name">Leia Organa</span>
+              <span class="job">Leader of the Rebel Alliance</span>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next nav-btn"></div>
+        <div class="swiper-button-prev nav-btn"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+<!----- store-3 ----->
+    <section class="store-3">
+        <div class="store-3-content">
+            <div class="store-3-text">
+                <h1>Get Started!</h1>
+                <p>Embark on a journey of discovery and exploration with our range of innovative products and services. From cutting-edge technology to cosmic adventures, we have something for every space enthusiast.</p>
+                <div class="popup-container">
+                    <a class="store-3-btn" onclick="togglePopup(this)">Sign Up</a>
+                    <span class="popuptext">Coming Soon!</span>
+                </div>
+            </div>
+            <img class="store-3-image" src="images/image-2.jpg" alt="Image">
+        </div>
+    </section>
+<!----- footer ----->
+    <div class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo">
+                    <a href="index.html"><img src="images/logo.png" width="125"></a>
+                </div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="store.html">Store</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <hr>
+            <p class="copyright">&copy; Copyright 2023 - Starlight, Inc. All rights reserved.</p>
+        </div>
+    </div>
+<!-- Swiper JS -->
+    <script src="js/swiper-bundle.min.js"></script>
+<!-- JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>

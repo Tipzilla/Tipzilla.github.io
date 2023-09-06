@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starlight</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet"/>
+</head>
+<body>
+<!----- header ----->
+    <header class="header">
+        <div class="header-wrapper">
+            <div class="header-logo">
+                <a href="index.html"><img src="images/logo.png" width="125"></a>
+            </div>
+            <div class="header-text">
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="store.html">Store</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <img src="images/menu.png" class="header-menu-icon" onclick="menutoggle()">
+          </div>
+        </div>
+        <hr>
+    </header>
+<!----- contact-1 ----->
+    <div class="contact-1">
+        <div class="contact-left-column">
+            <h1>Need Support?</h1>
+            <p>Get in touch with one of our customer support specialists!</p>
+            <img class="contact-1-image" src="images/image-5.jpg" alt="Image">
+        </div>
+        <div class="contact-right-column">
+            <form>
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" placeholder="John" maxlength="16" required>
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" placeholder="Doe" maxlength="16" required>
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email" placeholder="user@example.com" maxlength="320" required>
+                <label for="topic">What topic best fits your needs?</label>
+                <select id="topic" name="topic" required>
+                    <option value="" disabled selected>Select a topic</option>
+                    <option value="product_info">Product Information</option>
+                    <option value="order_shipping">Order and Shipping</option>
+                    <option value="tech_support">Technical Support</option>
+                    <option value="astronomy_stargazing">Astronomy and Stargazing</option>
+                    <option value="gifts_collectibles">Gifts and Collectibles</option>
+                    <option value="education">Educational Resources</option>
+                    <option value="events">Event and Exhibition Information</option>
+                    <option value="reviews_recommendations">Product Reviews and Recommendations</option>
+                    <option value="custom_orders">Custom Orders</option>
+                    <option value="general">General Inquiries</option>
+                </select>
+                <label for="userQuestion">How can we help?</label>
+                <textarea id="userQuestion" name="userQuestion" placeholder="Enter text here" required></textarea>
+                <input class="contact-submit-button" type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+<!----- footer ----->
+    <div class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo">
+                    <a href="index.html"><img src="images/logo.png" width="125"></a>
+                </div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="store.html">Store</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <hr>
+            <p class="copyright">&copy; Copyright 2023 - Starlight, Inc. All rights reserved.</p>
+        </div>
+    </div>
+<!-- Swiper JS -->
+    <script src="js/swiper-bundle.min.js"></script>
+<!-- JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>
