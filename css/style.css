@@ -1,17 +1,24 @@
-*{
+/* Resetting margins, padding, and box-sizing for all elements */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+/* Setting the font-family for the entire body */
 body {
     font-family: 'Poppins', sans-serif;
 }
-/*<----- home page css below ----->*/
+
+/*<----- index css below ----->*/
 /*<----- index-1 ----->*/
+/* Styling for the .index-1 section */
 .index-1 {
     display: flex;
     justify-content: center;
 }
+
+/* Styling for the .index-1-container */
 .index-1-container {
     position: relative;
     width: 100%;
@@ -21,8 +28,10 @@ body {
     background-image: url('../images/background-1.jpg');
     background-size: cover;
     height: 0;
-    padding-bottom: 60%;
+    padding-bottom: 60%; /* Creating a responsive aspect ratio */
 }
+
+/* Styling for the .index-1-title */
 .index-1-title {
     position: absolute;
     top: 7%;
@@ -31,6 +40,8 @@ body {
     color: white;
     font-size: 3vw;
 }
+
+/* Styling for the .index-1-slogan */
 .index-1-slogan {
     position: absolute;
     top: 12%;
@@ -39,6 +50,8 @@ body {
     color: white;
     font-size: 1.2vw;
 }
+
+/* Styling for the .index-1-button */
 .index-1-button {
     padding: 0.5vw 1vw;
     border: none;
@@ -55,15 +68,21 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+/* Styling for the .index-1-button on hover */
 .index-1-button:hover {
     background-color: #473ca3;
     color: white;
     border: 2px solid white;
 }
+
+/* Styling for the .index-1-button on click */
 .index-1-button:active {
     background-color: #d0d0d0;
     transform: translate(-50%, -50%) scale(0.95);
 }
+
+/* Styling for the .index-1-image */
 .index-1-image {
     position: absolute;
     top: 60%;
@@ -75,20 +94,26 @@ body {
     width: 50%;
     height: auto;
 }
+
 /*<----- index-2 ----->*/
+/* Styling for the .index-2 section */
 .index-2 {
     background-image: url('../images/background-2.jpg');
     background-size: cover;
     padding: 30px 0;
     color: white;
 }
+
+/* Styling for the .index-2-container */
 .index-2-container {
     margin: auto;
     padding-bottom: 25px;
     padding-top: 25px;
-    margin-left: 0; 
+    margin-left: 0; /* This rule could be removed, as it's not necessary */
     margin-right: auto;
 }
+
+/* Styling for the .index-2-row */
 .index-2-row {
     display: flex;
     flex-wrap: wrap;
@@ -97,6 +122,8 @@ body {
     justify-content: space-around;
     align-items: center;
 }
+
+/* Styling for the .index-2-col */
 .index-2-col {
     flex-basis: calc(50% - 15px);
     min-width: 300px;
@@ -104,19 +131,27 @@ body {
     padding-left: 5px;
     padding-bottom: 5px;
 }
+
+/* Styling for small text inside .index-2-col */
 .index-2-col small {
     font-size: 25px;
 }
+
+/* Styling for images within .index-2-col-img */
 .index-2-col-img img {
     border: 2px solid #fff;
     border-radius: 10px;
 }
+
+/* Styling for .index-2-col-img */
 .index-2-col-img {
-    flex-basis: calc(% - 15px);
+    flex-basis: calc(% - 15px); /* There seems to be a missing value here, like a percentage or pixel value */
     min-width: 300px;
     margin-bottom: 30px;
     margin-top: 30px;
 }
+
+/* Styling for the .index-2-btn */
 .index-2-btn {
     display: inline-block;
     background: #6355d8;
@@ -126,15 +161,22 @@ body {
     border-radius: 10px;
     transition: background 0.5s;
 }
+
+/* Styling for .index-2-btn on hover */
 .index-2-btn:hover {
     background: white;
     color: #6355d8;
+    border: 2px solid #6355d8;
 }
+
 /*<----- index-3 ----->*/
+/* Styling for the .index-3 section */
 .index-3 {
     display: flex;
     justify-content: center;
 }
+
+/* Styling for the .index-3-container */
 .index-3-container {
     position: relative;
     width: 100%;
@@ -146,6 +188,8 @@ body {
     height: 0;
     padding-bottom: 60%;
 }
+
+/* Styling for the .index-3-title */
 .index-3-title {
     position: absolute;
     top: 9%;
@@ -154,6 +198,8 @@ body {
     color: white;
     font-size: 4vw;
 }
+
+/* Styling for the .index-3-subtitle */
 .index-3-subtitle {
     position: absolute;
     top: 15%;
@@ -162,6 +208,8 @@ body {
     color: white;
     font-size: 1.5vw;
 }
+
+/* Styling for the .toggle-button */
 .toggle-button {
     display: flex;
     position: absolute;
@@ -169,6 +217,8 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+/* Styling for .option-button */
 .option-button {
     padding: 0.5vw 1vw;
     border: none;
@@ -179,20 +229,32 @@ body {
     border-radius: 10px;
     overflow: hidden;
 }
-#one-off-btn, #plan-btn {
+
+/* Styling for #one-off-btn and #plan-btn */
+#one-off-btn,
+#plan-btn {
     text-align: center;
     cursor: pointer;
     color: #473ca3;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
-#one-off-btn.active {
-    background-color: #6355d8;
-    color: white;
-}
+
+/* Styling for active #one-off-btn and #plan-btn */
+#one-off-btn.active,
 #plan-btn.active {
     background-color: #6355d8;
     color: white;
 }
+
+/* Styling for #plan-btn and #one-off-btn on hover */
+#plan-btn:hover,
+#one-off-btn:hover {
+    background-color: #6355d8;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+/* Styling for .ticket */
 .ticket {
     flex: 33.33%;
     height: auto;
@@ -203,6 +265,8 @@ body {
     text-align: left;
     border-radius: 10px;
 }
+
+/* Styling for .ticket-column */
 .ticket-column {
     display: flex;
     position: absolute;
@@ -213,11 +277,15 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+/* Styling for .ticket-header */
 .ticket-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
+/* Styling for .ticket-hot-label */
 .ticket-hot-label {
     background-color: red;
     color: white;
@@ -225,6 +293,8 @@ body {
     font-size: .8vw;
     border-radius: 10px;
 }
+
+/* Styling for .ticket-column-button */
 .ticket-column-button {
     padding: 0.5vw 1vw;
     background-color: white;
@@ -238,58 +308,84 @@ body {
     margin-top: 1.5vw;
     margin-right: 10vw;
     width: 100%;
-    justify-content: center; 
+    justify-content: center;
     border: 2px solid #473ca3;
 }
+
+/* Styling for .ticket-column-button on hover */
 .ticket-column-button:hover {
     background-color: #473ca3;
     color: white;
     border: 2px solid white;
 }
+
+/* Styling for .ticket-column-button on active */
 .ticket-column-button:active {
     background-color: #d0d0d0;
 }
+
+/* Styling for .ticket on hover */
 .ticket:hover {
     background-color: #473ca3;
     color: white;
     transform: translateY(-10px);
     border: 2px solid white;
 }
+
+/* Styling for .ticket h2 */
 .ticket h2 {
     font-size: 2.5vw;
 }
-.price-value{
+
+/* Styling for .price-value */
+.price-value {
     font-weight: bold;
 }
+
+/* Styling for .price */
 .price {
     font-size: 2.5vw;
     display: inline-block;
 }
+
+/* Styling for .text-mini */
 .text-mini {
     font-size: .7vw;
 }
+
+/* Styling for .text-plan */
 .text-plan {
     font-size: .7vw;
 }
+
+/* Styling for .text-features */
 .text-features {
     font-size: .8vw;
 }
+
+/* Styling for .ticket .tick-icon */
 .ticket .tick-icon {
-    font-size: 1.5vw; 
+    font-size: 1.5vw;
     color: green;
-    vertical-align: middle
+    vertical-align: middle;
 }
+
+/* Styling for .ticket .cross-icon */
 .ticket .cross-icon {
-    font-size: 1.5vw; 
+    font-size: 1.5vw;
     color: red;
     vertical-align: center;
 }
+
 /*<----- store page css below ----->*/
 /*<----- store-1 ----->*/
+/* Styling for the .store-1 section */
 .store-1 {
     display: flex;
     justify-content: center;
 }
+
+/* Styling for the .store-1-container */
 .store-1-container {
     position: relative;
     width: 100%;
@@ -301,6 +397,8 @@ body {
     height: 0;
     padding-bottom: 60%;
 }
+
+/* Styling for the .store-1-title */
 .store-1-title {
     position: absolute;
     top: 7%;
@@ -309,6 +407,8 @@ body {
     color: white;
     font-size: 3vw;
 }
+
+/* Styling for the .store-1-subtitle */
 .store-1-subtitle {
     position: absolute;
     top: 13%;
@@ -318,6 +418,8 @@ body {
     font-size: 1.2vw;
     text-align: center;
 }
+
+/* Styling for the .store-1-map */
 .store-1-map {
     position: absolute;
     top: 57%;
@@ -329,8 +431,10 @@ body {
     width: 50%;
     height: 75%;
 }
+
 /*<----- store-2 ----->*/
-.store-2{
+/* Styling for the .store-2 section */
+.store-2 {
     margin: auto;
     max-width: 100%;
     background-image: url('../images/background-5.jpg');
@@ -339,17 +443,23 @@ body {
     color: white;
     font-size: 20px;
 }
-.store-2-row-2{
+
+/* Styling for .store-2-row-2 */
+.store-2-row-2 {
     justify-content: space-between;
     margin: 100px auto 50px;
 }
-.store-2-row{
+
+/* Styling for .store-2-row */
+.store-2-row {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-around;
 }
-.store-2-col{
+
+/* Styling for .store-2-col */
+.store-2-col {
     flex-basis: 15%;
     padding: 10px;
     min-width: 200px;
@@ -358,10 +468,14 @@ body {
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 10px;
 }
+
+/* Styling for .store-2-image-container */
 .store-2-image-container {
     position: relative;
     display: inline-block;
 }
+
+/* Styling for .store-2-finance-label */
 .store-2-finance-label {
     position: absolute;
     top: 10px;
@@ -372,14 +486,20 @@ body {
     border-radius: 5px;
     cursor: pointer;
 }
-.store-2-col img{
+
+/* Styling for .store-2-col img */
+.store-2-col img {
     width: 100%;
     height: auto;
     border-radius: 10px;
 }
-.store-2-rating .fa{
+
+/* Styling for .store-2-rating .fa */
+.store-2-rating .fa {
     color: #6355d8;
 }
+
+/* Styling for .store-2-btn */
 .store-2-btn {
     display: inline-block;
     background: #6355d8;
@@ -390,14 +510,21 @@ body {
     border-radius: 10px;
     transition: background 0.5s;
 }
+
+/* Styling for .store-2-btn:hover */
 .store-2-btn:hover {
     background: white;
     color: #6355d8;
+    border: 2px solid #6355d8;
 }
+
+/* Hover effect for .store-2-col */
 .store-2-col:hover {
     transform: translateY(-10px);
 }
+
 /*<----- store-3 ----->*/
+/* Styling for the .store-3 section */
 .store-3 {
     background-position: center;
     display: flex;
@@ -411,6 +538,8 @@ body {
     font-size: 1.2vw;
     padding: 75px;
 }
+
+/* Styling for .store-3-content */
 .store-3-content {
     background-color: #6355d8;
     border-radius: 10px;
@@ -422,6 +551,8 @@ body {
     align-items: flex-start;
     border: 2px solid white;
 }
+
+/* Styling for .store-3-image */
 .store-3-image {
     z-index: 1;
     border-left: 2px solid white;
@@ -431,12 +562,16 @@ body {
     height: auto;
     border-left: 2px solid white;
 }
+
+/* Styling for .store-3-text */
 .store-3-text {
     flex: 1;
     padding: 50px;
     text-align: left;
     box-sizing: border-box;
 }
+
+/* Styling for .store-3-btn */
 .store-3-btn {
     display: inline-block;
     background-color: white;
@@ -447,17 +582,23 @@ body {
     color: #6355d8;
     cursor: pointer;
 }
+
+/* Styling for .store-3-btn:hover */
 .store-3-btn:hover {
     background: #6355d8;
     color: white;
     border: 2px solid white;
 }
+
 /*<----- about page css below ----->*/
 /*<----- about-1 ----->*/
+/* Styling for the .about-1 section */
 .about-1 {
     display: flex;
     justify-content: center;
 }
+
+/* Styling for .about-1-container */
 .about-1-container {
     position: relative;
     width: 100%;
@@ -469,6 +610,8 @@ body {
     height: 0;
     padding-bottom: 60%;
 }
+
+/* Styling for .about-1-title */
 .about-1-title {
     position: absolute;
     top: 7%;
@@ -477,6 +620,8 @@ body {
     color: white;
     font-size: 3vw;
 }
+
+/* Styling for .about-1-subtitle */
 .about-1-subtitle {
     position: absolute;
     top: 13%;
@@ -486,6 +631,8 @@ body {
     font-size: 1.2vw;
     text-align: center;
 }
+
+/* Styling for .about-1-image */
 .about-1-image {
     position: absolute;
     top: 55%;
@@ -497,8 +644,10 @@ body {
     width: 65%;
     height: 65%;
 }
+
 /*<----- about-2 ----->*/
-.about-2{
+/* Styling for the .about-2 section */
+.about-2 {
     margin: auto;
     max-width: 100%;
     background-image: url('../images/background-8.jpg');
@@ -506,20 +655,28 @@ body {
     padding: 30px 0;
     font-size: 20px;
 }
-.about-2 h1{
+
+/* Styling for the h1 within .about-2 */
+.about-2 h1 {
     color: white;
 }
-.about-2-row-2{
+
+/* Styling for .about-2-row-2 */
+.about-2-row-2 {
     justify-content: space-between;
     margin: 100px auto 50px;
 }
-.about-2-row{
+
+/* Styling for .about-2-row */
+.about-2-row {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-around;
 }
-.about-2-col{
+
+/* Styling for .about-2-col */
+.about-2-col {
     flex-basis: 15%;
     padding: 10px;
     min-width: 200px;
@@ -528,21 +685,30 @@ body {
     background-color: white;
     border-radius: 10px;
 }
+
+/* Styling for .about-2-image-container */
 .about-2-image-container {
     position: relative;
     display: inline-block;
 }
-.about-2-col img{
+
+/* Styling for images within .about-2-col */
+.about-2-col img {
     width: 100%;
     height: auto;
     border-radius: 10px;
 }
+
+/* Styling for .about-2-col on hover */
 .about-2-col:hover {
     background-color: #473ca3;
     color: white;
     transform: translateY(-10px);
+    border: 2px solid #fff;
 }
+
 /*<----- about-3 ----->*/
+/* Styling for the .about-3 section */
 .about-3 {
     background-position: center;
     display: flex;
@@ -556,6 +722,8 @@ body {
     font-size: 1.2vw;
     padding: 75px;
 }
+
+/* Styling for the .about-3-content */
 .about-3-content {
     background-color: #6355d8;
     border-radius: 10px;
@@ -567,6 +735,8 @@ body {
     align-items: flex-start;
     border: 2px solid white;
 }
+
+/* Styling for the .about-3-image */
 .about-3-image {
     z-index: 1;
     border-left: 2px solid white;
@@ -575,12 +745,16 @@ body {
     max-width: 100%;
     height: auto;
 }
+
+/* Styling for .about-3-text */
 .about-3-text {
     flex: 1;
     padding: 50px;
     text-align: left;
     box-sizing: border-box;
 }
+
+/* Styling for .about-3-btn */
 .about-3-btn {
     display: inline-block;
     background-color: white;
@@ -591,13 +765,17 @@ body {
     color: #6355d8;
     cursor: pointer;
 }
+
+/* Styling for .about-3-btn on hover */
 .about-3-btn:hover {
     background: #6355d8;
     color: white;
     border: 2px solid white;
 }
+
 /*<----- contact page css below ----->*/
 /*<----- contact-1 ----->*/
+/* Styling for the .contact-1 section */
 .contact-1 {
     background-position: center;
     display: flex;
@@ -610,8 +788,10 @@ body {
     font-size: 30px;
     padding: 75px;
     display: flex;
-    align-items: f
+    align-items: f /* This value is incomplete, it should be 'flex-start', 'flex-end', or 'center' */
 }
+
+/* Styling for input[type="text"] and select elements */
 input[type="text"], select {
     width: 100%;
     padding: 10px;
@@ -620,6 +800,8 @@ input[type="text"], select {
     border-radius: 10px;
     font-size: 20px;
 }
+
+/* Styling for textarea elements */
 textarea {
     width: 100%;
     padding: 10px;
@@ -631,27 +813,37 @@ textarea {
     height: 150px;
     font-family: 'Poppins', sans-serif;
 }
+
+/* Styling for .contact-left-column */
 .contact-left-column {
     flex: 1;
     padding-right: 20px;
 }
+
+/* Styling for .contact-right-column */
 .contact-right-column {
     flex: 1;
     text-align: right;
     padding-left: 20px;
 }
-.contact-1-image{
+
+/* Styling for .contact-1-image */
+.contact-1-image {
     width: 100%;
     height: auto;
     border-radius: 10px;
     border: 2px solid white;
 }
+
+/* Styling for label elements */
 label {
     display: block;
     text-align: left;
     font-weight: bold;
     margin-bottom: 5px;
 }
+
+/* Styling for .contact-submit-button */
 .contact-submit-button {
     background-color: #6355d8;
     color: white;
@@ -660,28 +852,38 @@ label {
     padding: 20px 20px;
     font-size: 18px;
     cursor: pointer;
-    width: 100%; 
+    width: 100%;
 }
+
+/* Styling for .contact-submit-button on hover */
 .contact-submit-button:hover {
     background-color: white;
     color: #6355d8;
     border-radius: 10px;
     border: 2px solid #6355d8;
 }
+
 /*<----- header ----->*/
+/* Styling for the .header section */
 .header {
     width: 100%;
     position: relative;
 }
+
+/* Styling for the .header-wrapper section */
 .header-wrapper {
     width: 100%;
     position: relative;
     margin: 30px 0;
 }
+
+/* Styling for the .header-logo section */
 .header-logo {
     display: flex;
     margin-left: 20px;
 }
+
+/* Styling for the .header-text section */
 .header-text {
     text-align: center;
     position: absolute;
@@ -689,31 +891,43 @@ label {
     top: 50%;
     transform: translateY(-50%);
 }
+
+/* Styling for navigation unordered list */
 nav ul {
     display: inline-block;
     list-style-type: none;
-    padding: 0; 
+    padding: 0;
 }
+
+/* Styling for navigation list items */
 nav ul li {
     display: inline-block;
     margin-right: 20px;
 }
+
+/* Styling for anchor (link) elements */
 a {
     text-decoration: none;
     color: #555;
 }
+
+/* Styling for horizontal rule (separator) */
 .header hr {
     border: none;
     background: #b5b5b5;
     height: 1px;
     margin: 20px 0px;
 }
+
+/* Styling for the header menu icon */
 .header-menu-icon {
     width: 28px;
     margin-left: 20px;
     display: none;
 }
+
 /*<----- brands ----->*/
+/* Styling for the .brands section */
 .brands {
     display: flex;
     justify-content: center;
@@ -723,6 +937,8 @@ a {
     border-top: 5px solid white;
     border-bottom: 5px solid white;
 }
+
+/* Styling for the .brands-title section */
 .brands-title {
     display: flex;
     align-items: center;
@@ -730,20 +946,28 @@ a {
     justify-content: space-around;
     color: gray;
 }
+
+/* Styling for the .brands-col section */
 .brands-col {
     width: 160px;
     display: inline-block;
     vertical-align: middle;
 }
+
+/* Styling for images within .brands-col */
 .brands-col img {
     width: 100%;
     cursor: pointer;
     filter: grayscale(100%);
     padding-right: 10px;
 }
+
+/* Styling for image hover effect */
 .brands-col img:hover {
     filter: grayscale(0);
 }
+
+/* Styling for the .brands-container section */
 .brands-container {
     max-width: 1080px;
     margin: auto;
@@ -752,7 +976,9 @@ a {
     padding-bottom: 25px;
     padding-top: 25px;
 }
+
 /*<----- testimonials ----->*/
+/* Styling for the .test-container section */
 .test-container {
     display: flex;
     align-items: center;
@@ -761,6 +987,8 @@ a {
     border-top: 5px solid white;
     border-bottom: 5px solid white;
 }
+
+/* Styling for the .testimonial section */
 .testimonial {
     position: relative;
     max-width: 900px;
@@ -768,12 +996,16 @@ a {
     padding: 50px 0;
     overflow: hidden;
 }
+
+/* Styling for the .image within .testimonial */
 .testimonial .image {
     height: 200px;
     width: 200px;
     object-fit: cover;
     border-radius: 50%;
 }
+
+/* Styling for the .slide within .testimonial */
 .testimonial .slide {
     display: flex;
     align-items: center;
@@ -783,6 +1015,8 @@ a {
     height: 100%;
     width: 100%;
 }
+
+/* Styling for paragraphs within .slide */
 .slide p {
     text-align: center;
     padding: 0 160px;
@@ -790,25 +1024,35 @@ a {
     font-weight: 400;
     color: white;
 }
+
+/* Styling for the quote icon within .slide */
 .slide .quote-icon {
     font-size: 30px;
     color: #6355d8;
 }
+
+/* Styling for the .details within .slide */
 .slide .details {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
+/* Styling for the name within .details */
 .details .name {
     font-size: 15px;
     font-weight: 600;
     color: white;
 }
+
+/* Styling for the job title within .details */
 .details .job {
     font-size: 13px;
     font-weight: 400;
     color: white;
 }
+
+/* Styling for navigation buttons */
 .nav-btn {
     height: 40px;
     width: 40px;
@@ -817,45 +1061,67 @@ a {
     background-color: rgba(0, 0, 0, 0.1);
     transition: 0.2s;
 }
+
+/* Styling for navigation button hover effect */
 .nav-btn:hover {
     background-color: rgba(200, 200, 200, 0.4);
 }
+
+/* Styling for icons within navigation buttons */
 .nav-btn::after, .nav-btn::before {
     font-size: 20px;
     color: #6355d8;
 }
+
+/* Styling for the pagination bullet */
 .swiper-pagination-bullet {
     background-color: rgba(0, 0, 0, 0.8);
 }
+
+/* Styling for the active pagination bullet */
 .swiper-pagination-bullet-active {
     background-color: #6355d8;
 }
+
 /*<----- footer ----->*/
+/* Styling for the .footer-content section */
 .footer-content {
     display: flex;
     margin: 0 auto;
     margin-top: 50px;
     justify-content: center;
 }
+
+/* Styling for the .container within .footer-content */
 .container {
     max-width: 100%;
     margin: auto;
 }
+
+/* Styling for the .logo within .footer-content */
 .footer-content .logo {
     margin-right: 20px;
 }
+
+/* Styling for images within .footer-content */
 .footer-content img {
     max-width: 100px;
 }
+
+/* Styling for unordered lists within .footer-content */
 .footer-content ul {
     display: inline-block;
     list-style-type: none;
 }
+
+/* Styling for list items within .footer-content */
 .footer-content ul li {
     display: inline-block;
     margin-right: 20px;
     font-weight: bold;
 }
+
+/* Styling for the horizontal line within .footer */
 .footer hr {
     border: none;
     background: #b5b5b5;
@@ -863,16 +1129,22 @@ a {
     margin: 20px 0;
     margin-top: 50px;
 }
+
+/* Styling for the copyright text */
 .copyright {
     color: #555;
     padding-bottom: 10px;
     text-align: center;
 }
+
 /*<----- pop-up dialog ----->*/
+/* Styles for a popup container */
 .popup-container {
     position: relative;
     display: inline-block;
 }
+
+/* Styles for the popup text */
 .popup-container .popuptext {
     visibility: hidden;
     width: 160px;
@@ -888,6 +1160,8 @@ a {
     transform: translateX(-50%);
     margin-top: 10px;
 }
+
+/* Create an arrow-like shape for the popup */
 .popup-container .popuptext::after {
     content: "";
     position: absolute;
@@ -898,13 +1172,18 @@ a {
     border-style: solid;
     border-color: #555 transparent transparent transparent;
 }
+
+/* Show the popup */
 .popup-container .show {
     visibility: visible;
     -webkit-animation: fadeIn 1s;
     animation: fadeIn 1s;
 }
+
 /*<----- screen size changes ----->*/
+/* Media query for screens with a maximum width of 800px */
 @media only screen and (max-width: 800px) {
+    /* Adjust the header text alignment and layout for smaller screens */
     .header-text {
         text-align: right;
         padding-right: 20px;
@@ -913,6 +1192,8 @@ a {
         align-items: center;
         z-index: 2;
     }
+
+    /* Style the navigation menu for smaller screens */
     nav ul {
         position: absolute;
         top: 70px;
@@ -922,33 +1203,50 @@ a {
         overflow: hidden;
         transition: max-height 0.5s;
     }
+
+    /* Style individual list items in the navigation menu */
     nav ul li {
         display: block;
         margin-right: 30px;
         margin-top: 10px;
         margin-bottom: 10px;
     }
+
+    /* Style the links in the navigation menu */
     nav ul li a {
         color: #fff;
     }
+
+    /* Display the header menu icon for smaller screens */
     .header-menu-icon {
         display: block;
         cursor: pointer;
     }
+
+    /* Adjust layout for index-2 section on smaller screens */
     .index-2-row {
         text-align: center;
     }
+
+    /* Make index-2 columns take full width on smaller screens */
     .index-2-col {
         flex-basis: 100%;
     }
+
+    /* Adjust padding for testimonial slide paragraphs on smaller screens */
     .slide p {
         padding: 0 20px;
     }
+
+    /* Hide navigation buttons on smaller screens */
     .nav-btn {
         display: none;
     }
 }
+
+/* Media query for screens with a maximum width of 1340px */
 @media (max-width: 1340px) {
+    /* Hide certain images in store-3, about-3, and contact-1 sections */
     .store-3-image, .about-3-image, .contact-1-image {
         display: none;
     }
