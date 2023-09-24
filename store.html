@@ -16,9 +16,6 @@
     <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet"/>
 </head>
 <body>
-    
-<!-- This website has been thoroughly tested for compatibility on the latest versions of popular web browsers, including Google Chrome, Mozilla Firefox, Apple Safari, Microsoft Edge, and mobile browsers like Chrome for Android and Safari for iOS. -->
-
 <!----- header ----->
 <header class="header">
     <!-- Header wrapper to contain logo, navigation, and menu icon -->
@@ -46,18 +43,16 @@
     <!-- Horizontal line as a separator -->
     <hr>
 </header>
-<!----- index-1 ----->
-<div class="index-1">
-    <!-- Container for content in the "index-1" section -->
-    <div class="index-1-container">
-        <!-- Main title -->
-        <h1 class="index-1-title">Starlight Space Journeys</h1>
-        <!-- Slogan or subtitle -->
-        <p class="index-1-slogan">"Embrace the Infinity: Your Journey to Starlight Awaits!"</p>
-        <!-- Button for pre-purchasing tickets, identified by its ID -->
-        <button id="index-1-btn" class="index-1-button">Pre-Purchase Tickets</button>
-        <!-- Image for this section with a specified height -->
-        <img class="index-1-image" src="images/image-1.jpg" height="800">
+<!----- store-1 ----->
+<div class="store-1">
+    <!-- Store content container -->
+    <div class="store-1-container">
+        <!-- Store title -->
+        <h1 class="store-1-title">Store</h1>
+        <!-- Store subtitle -->
+        <p class="store-1-subtitle">Find us easily! Explore our store's location on the embedded Google Map below for a hassle-free visit.</p>
+        <!-- Embedded Google Map -->
+        <iframe class="store-1-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3389.13229635714!2d175.28040481697232!3d-37.78880093177154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d6d18a57fa16281%3A0x72b05e2e8812d179!2sWintec%20Te%20P%C5%ABkenga%20City%20Campus!5e0!3m2!1sen!2snz!4v1693260556443!5m2!1sen!2snz" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 </div>
 <!----- trusted brands ----->
@@ -89,79 +84,264 @@
         </div>
     </div>
 </div>
-<!----- index-2 ----->
-<div class="index-2">
-    <!-- Container for the "index-2" section -->
-    <div class="index-2-container">
-        <!-- First product row: SpaceGuard -->
-        <div class="index-2-row">
-            <!-- Column for displaying product image -->
-            <div class="index-2-col-img">
-                <img src="images/product-1.png" height="500">
+<!----- store-2 ----->
+<div class="store-2">
+    <!-- Store content container -->
+    <div class="store-2-row store-2-row-2">
+        <!-- Store title -->
+        <h1>All Products</h1>
+    </div>
+    <div class="store-2-row">
+        <!-- Product 1 -->
+        <div class="store-2-col">
+            <img src="images/product-1.png">
+            <h4>SpaceGuard&#8482;</h4>
+            <small>Uncompromised safety, visionary engineering, and seamless data connectivity to redefine space journeys.</small>
+            <!-- Product rating -->
+            <div class="store-2-rating">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star-o" aria-hidden="true"></i>
             </div>
-            <!-- Column for displaying product information -->
-            <div class="index-2-col">
-                <!-- Product title -->
-                <h1>SpaceGuard&#8482;</h1>
-                <!-- Product description -->
-                <small>
-                    The pinnacle of astronaut safety and exploration technology. Designed to withstand the harshest cosmic conditions, this sleek and ergonomic helmet offers an unmatched fusion of form and function. With its reinforced impact-resistant visor, advanced life support systems, and intuitive heads-up display, SpaceGuard&#8482; ensures that every astronaut remains not just protected, but fully connected to mission-critical data while venturing into the uncharted realms of space. Discover a new dimension of confidence as you embark on celestial journeys with the assurance of uncompromised safety and visionary engineering that define our SpaceGuard&#8482; Helmet.
-                </small>
-                <br>
-                <!-- Button to navigate to the store -->
-                <a href="store.html" class="index-2-btn">Buy Now &#8594;</a>
+            <p>$2,499.99</p>
+            <!-- Buy Now button -->
+            <div class="popup-container">
+                <a class="store-2-btn" onclick="togglePopup(this)">Buy Now &#8594;</a>
+                <!-- Popup text (Coming Soon) -->
+                <span class="popuptext">Coming Soon!</span>
+            </div>
+        </div>
+            <div class="store-2-col">
+                <div class="store-2-image-container">
+                <img src="images/product-2.png">
+                <div class="store-2-finance-label">
+                <div class="popup-container">
+                    <p onclick="togglePopup(this)">Finance Available!</p>
+                    <span class="popuptext">Coming Soon!</span>
+                </div>
+                </div>
+                </div>
+                <h4>VoyagerEx&#8482;</h4>
+                <small>Uniting lightweight durability, thermal comfort, and seamless communication, it redefines exploration beyond Earth.</small>
+                <div class="store-2-rating">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                </div>
+                <p>$4,999.99</p>
+                <div class="popup-container">
+                    <a class="store-2-btn" onclick="togglePopup(this)">Buy Now &#8594;</a>
+                    <span class="popuptext">Coming Soon!</span>
+                </div>
+            </div>
+            <div class="store-2-col">
+                <img src="images/product-3.png">
+                <h4>StellarStride&#8482;</h4>
+                <small>Engineered for celestial explorers. Ensuring secure footing on alien terrains, while tech enhances endurance and protection.</small>
+                <div class="store-2-rating">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                </div>
+                <p>$799.99</p>
+                <div class="popup-container">
+                    <a class="store-2-btn" onclick="togglePopup(this)">Buy Now &#8594;</a>
+                    <span class="popuptext">Coming Soon!</span>
+                </div>
+            </div>
+            <div class="store-2-col">
+                <div class="store-2-image-container">
+                <img src="images/product-4.png">
+                <div class="store-2-finance-label">
+                <div class="popup-container">
+                    <p onclick="togglePopup(this)">Finance Available!</p>
+                    <span class="popuptext">Coming Soon!</span>
+                </div>
+                </div>
+                </div>
+                <h4>AeroJet XE-1&#8482;</h4>
+                <small>Precise control and unmatched innovation redefine human mobility for urban commuting and adventurous exploration.</small>
+                <div class="store-2-rating">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                </div>
+                <p>$12,999.99</p>
+                <div class="popup-container">
+                    <a class="store-2-btn" onclick="togglePopup(this)">Buy Now &#8594;</a>
+                    <span class="popuptext">Coming Soon!</span>
+                </div>
+            </div>
+            <div class="store-2-col">
+                <img src="images/product-5.png">
+                <h4>AstroNav GPS Navigator&#8482;</h4>
+                <small>This advanced navigation system brings accuracy, reliability, and innovation to interstellar journeys like never before.</small>
+                <div class="store-2-rating">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                </div>
+                <p>$799.99</p>
+                <div class="popup-container">
+                    <a class="store-2-btn" onclick="togglePopup(this)">Buy Now &#8594;</a>
+                    <span class="popuptext">Coming Soon!</span>
+                </div>
+            </div>
+            <div class="store-2-col">
+                <div class="store-2-image-container">
+                <img src="images/product-6.png">
+                <div class="store-2-finance-label">
+                <div class="popup-container">
+                    <p onclick="togglePopup(this)">Finance Available!</p>
+                    <span class="popuptext">Coming Soon!</span>
+                </div>
+                </div>
+                </div>
+                <h4>QuantumLeap Engine&#8482;</h4>
+                <small>A technological marvel that pushes the boundaries of space travel. Propel yourself beyond the limits and into the cosmos!</small>
+                <div class="store-2-rating">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                </div>
+                <p>$999,999.99</p>
+                <div class="popup-container">
+                    <a class="store-2-btn" onclick="togglePopup(this)">Buy Now &#8594;</a>
+                    <span class="popuptext">Coming Soon!</span>
+                </div>
+            </div>
+            <div class="store-2-col">
+                <img src="images/product-7.png">
+                <h4>NebulaDream Sleep Pods&#8482;</h4>
+                <small>Immerse yourself in a cocoon of comfort, specially designed for rejuvenating sleep in the boundless expanse of space.</small>
+                <div class="store-2-rating">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                </div>
+                <p>$1,499.99</p>
+                <div class="popup-container">
+                    <a class="store-2-btn" onclick="togglePopup(this)">Buy Now &#8594;</a>
+                    <span class="popuptext">Coming Soon!</span>
+                </div>
+            </div>
+            <div class="store-2-col">
+                <div class="store-2-image-container">
+                <img src="images/product-8.png">
+                <div class="store-2-finance-label">
+                <div class="popup-container">
+                    <p onclick="togglePopup(this)">Finance Available!</p>
+                    <span class="popuptext">Coming Soon!</span>
+                </div>
+                </div>
+                </div>
+                <h4>Environmental ExoSuit&#8482;</h4>
+                <small>Your companion for venturing into the harshest and most extreme conditions, enhancing your exploration experience.</small>
+                <div class="store-2-rating">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                </div>
+                <p>$2,599.99</p>
+                <div class="popup-container">
+                    <a class="store-2-btn" onclick="togglePopup(this)">Buy Now &#8594;</a>
+                    <span class="popuptext">Coming Soon!</span>
+                </div>
+            </div>
+            <div class="store-2-col">
+                <img src="images/product-9.png">
+                <h4>Bioluminescent Plant Kit&#8482;</h4>
+                <small>Illuminate your living space - experience the magic of bioluminescence as you cultivate your own otherworldly oasis.</small>
+                <div class="store-2-rating">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                </div>
+                <p>$149.99</p>
+                <div class="popup-container">
+                    <a class="store-2-btn" onclick="togglePopup(this)">Buy Now &#8594;</a>
+                    <span class="popuptext">Coming Soon!</span>
+                </div>
+            </div>
+            <div class="store-2-col">
+                <img src="images/product-10.png">
+                <h4>Cosmic Radiation Vest&#8482;</h4>
+                <small>To protect astronauts and space explorers, this vest ensures your safety amidst the cosmic challenges of radiation.</small>
+                <div class="store-2-rating">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                </div>
+                <p>$799.99</p>
+                <div class="popup-container">
+                    <a class="store-2-btn" onclick="togglePopup(this)">Buy Now &#8594;</a>
+                    <span class="popuptext">Coming Soon!</span>
+                </div>
+            </div>
+            <div class="store-2-col">
+                <img src="images/product-11.png">
+                <h4>SV ProBinoculars&#8482;</h4>
+                <small>Crafted for avid stargazers and astronomy enthusiasts, these binoculars offer a gateway to wonders like never before.</small>
+                <div class="store-2-rating">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                </div>
+                <p>$399.99</p>
+                <div class="popup-container">
+                    <a class="store-2-btn" onclick="togglePopup(this)">Buy Now &#8594;</a>
+                    <span class="popuptext">Coming Soon!</span>
+                </div>
+            </div>
+            <div class="store-2-col">
+                <div class="store-2-image-container">
+                <img src="images/product-12.png">
+                <div class="store-2-finance-label">
+                <div class="popup-container">
+                    <p onclick="togglePopup(this)">Finance Available!</p>
+                    <span class="popuptext">Coming Soon!</span>
+                </div>
+                </div>
+                </div>
+                <h4>LevitaGravity Capsules&#8482;</h4>
+                <small>Experience the sensation of weightlessness and redefine the boundaries of human movement in the cosmos.</small>
+                <div class="store-2-rating">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                </div>
+                <p>$2,999.99</p>
+                <div class="popup-container">
+                    <a class="store-2-btn" onclick="togglePopup(this)">Buy Now &#8594;</a>
+                    <span class="popuptext">Coming Soon!</span>
+                </div>
             </div>
         </div>
     </div>
-    <!-- Second product row: VoyagerEx -->
-    <div class="index-2-container">
-        <div class="index-2-row">
-            <div class="index-2-col-img">
-                <img src="images/product-2.png" height="500">
-            </div>
-            <div class="index-2-col">
-                <h1>VoyagerEx&#8482;</h1>
-                <small>
-                    A marvel of modern engineering crafted for the most demanding extraterrestrial endeavors. Meticulously designed with lightweight yet highly durable materials, the VoyagerEx&#8482; suit provides exceptional mobility without sacrificing protection. Its advanced thermal regulation system guarantees comfort in the extreme temperatures of space, while the integrated communication gear ensures seamless contact with mission control and fellow astronauts. With reinforced joints and a sleek, customizable design, the VoyagerExTM Space Suit empowers explorers to venture beyond Earth's confines, pushing the boundaries of human potential in the cosmos.
-                </small>
-                <br>
-                <a href="store.html" class="index-2-btn">Buy Now &#8594;</a>
-            </div>
-        </div>
-    </div>
-    <!-- Third product row: StellarStride -->
-    <div class="index-2-container">
-        <div class="index-2-row">
-            <div class="index-2-col-img">
-                <img src="images/product-3.png" height="500">
-            </div>
-            <div class="index-2-col">
-                <h1>StellarStride&#8482;</h1>
-                <small>
-                    The ultimate fusion of comfort, performance, and reliability for celestial explorers. Engineered with cutting-edge materials, these boots offer unparalleled grip and stability on alien terrains, ensuring secure footing in microgravity and varied planetary landscapes. The innovative anti-fatigue sole technology minimizes strain during extended spacewalks, while the reinforced toe and heel protection safeguard against impacts and sharp surfaces. StellarStrideTM Space Boots also feature an integrated magnetic clasp system for easy donning and doffing in zero-gravity environments. Elevate your spacewalk experience with the confidence of superior traction and support, making each step a giant leap into the unknown.
-                </small>
-                <br>
-                <a href="store.html" class="index-2-btn">Buy Now &#8594;</a>
-            </div>
-        </div>
-    </div>
-    <!-- Fourth product row: AeroJet XE-1 -->
-    <div class="index-2-container">
-        <div class="index-2-row">
-            <div class="index-2-col-img">
-                <img src="images/product-4.png" height="500">
-            </div>
-            <div class="index-2-col">
-                <h1>AeroJet XE-1&#8482;</h1>
-                <small>
-                    The pinnacle of personal propulsion technology. The AeroJet XE-1&#8482; jetpack redefines human mobility, offering an unparalleled blend of power, control, and innovation. Designed for both urban commuting and adventurous exploration, its compact and ergonomic design belies its impressive thrust capability, enabling swift, vertical takeoffs and precise aerial maneuvers. With a cutting-edge fuel efficiency system and intuitive controls, AeroJet XE-1&#8482; ensures both novices and experts can enjoy the thrill of flight while maintaining the highest safety standards. Whether navigating through cityscapes or soaring above natural landscapes, AeroJet XE-1&#8482; offers the freedom to transcend boundaries and experience the world from an entirely new perspective.
-                </small>
-                <br>
-                <a href="store.html" class="index-2-btn">Buy Now &#8594;</a>
-            </div>
-        </div>
-    </div>
-</div>
 <!----- testimonials ----->
 <section class="test-container">
     <!-- Testimonial container with swiper -->
@@ -240,113 +420,25 @@
         <div class="swiper-pagination"></div>
     </div>
 </section>
-<!----- index-3 ----->
-<section id="index-3" class="index-3">
-    <!-- Container for the pricing section -->
-    <div class="index-3-container">
-        <!-- Pricing section title -->
-        <h2 class="index-3-title">Pricing</h2>
-        <!-- Pricing section subtitle -->
-        <p class="index-3-subtitle">Select your plan below!</p>
-        <!-- Toggle buttons for plan selection -->
-        <div class="toggle-button">
-            <button id="one-off-btn" class="option-button active">One-Off</button>
-            <button id="plan-btn" class="option-button">Plan</button>
-        </div>
-        <!-- Ticket options container -->
-        <div class="ticket-column">
-            <!-- Economy Ticket -->
-            <div class="ticket" id="economy-ticket">
-                <h2>Economy</h2>
-                <p class="text-mini">Suborbital adventure, safety training, memorable photo.</p>
-                <p class="price">
-                    <span class="price-value">$500</span>
-                    <span class="text-plan">/one-time payment</span>
-                </p>
-                <hr>
-                <br>
-                <!-- Features of the Economy Ticket -->
-                <i class="fa fa-check-square-o tick-icon"></i>
-                <span class="text-features">Suborbital Flight: Experience weightlessness and see Earth from the edge of space.</span>
-                <br>
-                <i class="fa fa-check-square-o tick-icon"></i>
-                <span class="text-features">Commemorative Photo: Capture the moment with a professional space-themed photo.</span>
-                <br>
-                <i class="fa fa-times cross-icon" aria-hidden="true"></i>
-                <span class="text-features">Personalized Meals: Customized meals based on preferences.</span>
-                <br>
-                <i class="fa fa-times cross-icon" aria-hidden="true"></i>
-                <span class="text-features">Access to Launch Facility: Tour the launch site and witness the rocket preparation.</span>
-                <hr>
-                <!-- Pre-Purchase button with popup -->
-                <div class="popup-container">
-                    <a class="ticket-column-button" onclick="togglePopup(this)">Pre-Purchase</a>
-                    <span class="popuptext">Coming Soon!</span>
-                </div>
-            </div>
-            <!-- Business Ticket -->
-            <div class="ticket" id="business-ticket">
-                <!-- Ticket header with a "Hot!" label -->
-                <div class="ticket-header">
-                    <h2>Business</h2>
-                    <span class="ticket-hot-label">Hot!</span>
-                </div>
-                <p class="text-mini">Extended voyage, custom meals, priority assistance.</p>
-                <p class="price">
-                    <span class="price-value">$750</span>
-                    <span class="text-plan">/one-time payment</span>
-                </p>
-                <hr>
-                <br>
-                <!-- Features of the Business Ticket -->
-                <i class="fa fa-check-square-o tick-icon"></i>
-                <span class="text-features">Suborbital Flight: Experience weightlessness and see Earth from the edge of space.</span>
-                <br>
-                <i class="fa fa-check-square-o tick-icon"></i>
-                <span class="text-features">Commemorative Photo: Capture the moment with a professional space-themed photo.</span>
-                <br>
-                <i class="fa fa-check-square-o tick-icon" aria-hidden="true"></i>
-                <span class="text-features">Personalized Meals: Customized meals based on preferences.</span>
-                <br>
-                <i class="fa fa-times cross-icon" aria-hidden="true"></i>
-                <span class="text-features">Access to Launch Facility: Tour the launch site and witness the rocket preparation.</span>
-                <hr>
-                <!-- Pre-Purchase button with popup -->
-                <div class="popup-container">
-                    <a class="ticket-column-button" onclick="togglePopup(this)">Pre-Purchase</a>
-                    <span class="popuptext">Coming Soon!</span>
-                </div>
-            </div>
-            <!-- VIP Ticket -->
-            <div class="ticket" id="vip-ticket">
-                <h2>VIP</h2>
-                <p class="text-mini">Ultimate journey with extended flight, facility tour, and more.</p>
-                <p class="price">
-                    <span class="price-value">$1200</span>
-                    <span class="text-plan">/one-time payment</span>
-                </p>
-                <hr>
-                <br>
-                <!-- Features of the VIP Ticket -->
-                <i class="fa fa-check-square-o tick-icon"></i>
-                <span class="text-features">Suborbital Flight: Experience weightlessness and see Earth from the edge of space.</span>
-                <br>
-                <i class="fa fa-check-square-o tick-icon"></i>
-                <span class="text-features">Commemorative Photo: Capture the moment with a professional space-themed photo.</span>
-                <br>
-                <i class="fa fa-check-square-o tick-icon" aria-hidden="true"></i>
-                <span class="text-features">Personalized Meals: Customized meals based on preferences.</span>
-                <br>
-                <i class="fa fa-check-square-o tick-icon" aria-hidden="true"></i>
-                <span class="text-features">Access to Launch Facility: Tour the launch site and witness the rocket preparation.</span>
-                <hr>
-                <!-- Pre-Purchase button with popup -->
-                <div class="popup-container">
-                    <a class="ticket-column-button" onclick="togglePopup(this)">Pre-Purchase</a>
-                    <span class="popuptext">Coming Soon!</span>
-                </div>
+<!----- store-3 ----->
+<section class="store-3">
+    <!-- Store content container -->
+    <div class="store-3-content">
+        <!-- Text content -->
+        <div class="store-3-text">
+            <!-- Title -->
+            <h1>Get Started!</h1>
+            <!-- Description -->
+            <p>Embark on a journey of discovery and exploration with our range of innovative products and services. From cutting-edge technology to cosmic adventures, we have something for every space enthusiast.</p>
+            <!-- Sign Up button -->
+            <div class="popup-container">
+                <a class="store-3-btn" onclick="togglePopup(this)">Sign Up</a>
+                <!-- Popup text (Coming Soon) -->
+                <span class="popuptext">Coming Soon!</span>
             </div>
         </div>
+        <!-- Image -->
+        <img class="store-3-image" src="images/image-2.jpg" alt="Image">
     </div>
 </section>
 <!----- footer ----->
