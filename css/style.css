@@ -1242,6 +1242,16 @@ a {
     .nav-btn {
         display: none;
     }
+
+    /* Adjust contact form on smaller screens */
+    .contact-1 {
+        font-size: 20px;
+    }
+    
+    /* Adjust contact button on smaller screens */
+    .contact-submit-button {
+        font-size: 16px;
+    }
 }
 
 /* Media query for screens with a maximum width of 1340px */
