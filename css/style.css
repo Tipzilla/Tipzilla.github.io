@@ -1119,6 +1119,11 @@ a {
     list-style-type: none;
 }
 
+/* Styling for adding underline to text hover */
+.footer a:hover {
+    text-decoration: underline;
+}
+
 /* Styling for list items within .footer-content */
 .footer-content ul li {
     display: inline-block;
