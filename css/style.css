@@ -1109,6 +1109,19 @@ a {
     margin-right: 20px;
 }
 
+/* Styling for the .social-media within .footer-content */
+.footer-content .social-media a {
+    text-decoration: none; 
+    color: #555; 
+    transition: color 0.3s ease; 
+}
+
+/* Styling for the .social-media hover within .footer-content */
+.footer-content .social-media a:hover {
+    color: #007bff; 
+    text-decoration: none;
+}
+
 /* Styling for images within .footer-content */
 .footer-content img {
     max-width: 100px;
@@ -1253,7 +1266,7 @@ a {
     .nav-btn {
         display: none;
     }
-
+    
     /* Adjust contact form on smaller screens */
     .contact-1 {
         font-size: 20px;
