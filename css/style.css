@@ -892,6 +892,11 @@ label {
     transform: translateY(-50%);
 }
 
+/* Styling for adding underline to text hover */
+a:hover {
+    text-decoration: underline;
+}
+
 /* Styling for navigation unordered list */
 nav ul {
     display: inline-block;
