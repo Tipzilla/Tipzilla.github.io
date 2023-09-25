@@ -893,7 +893,7 @@ label {
 }
 
 /* Styling for adding underline to text hover */
-a:hover {
+.header a:hover {
     text-decoration: underline;
 }
 
