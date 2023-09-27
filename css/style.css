@@ -109,7 +109,6 @@ body {
     margin: auto;
     padding-bottom: 25px;
     padding-top: 25px;
-    margin-left: 0; /* This rule could be removed, as it's not necessary */
     margin-right: auto;
 }
 
@@ -145,7 +144,6 @@ body {
 
 /* Styling for .index-2-col-img */
 .index-2-col-img {
-    flex-basis: calc(% - 15px); /* There seems to be a missing value here, like a percentage or pixel value */
     min-width: 300px;
     margin-bottom: 30px;
     margin-top: 30px;
