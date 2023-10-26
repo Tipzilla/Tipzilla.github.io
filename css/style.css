@@ -1,1285 +1,623 @@
-/* Resetting margins, padding, and box-sizing for all elements */
-* {
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;3#189AD00;400;600&display=swap');
+
+:root {
+    --blue: #189AD3;
+}
+
+*{
+    font-family: 'Nunito', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-/* Setting the font-family for the entire body */
-body {
-    font-family: 'Poppins', sans-serif;
-}
-
-/*<----- index css below ----->*/
-/*<----- index-1 ----->*/
-/* Styling for the .index-1 section */
-.index-1 {
-    display: flex;
-    justify-content: center;
-}
-
-/* Styling for the .index-1-container */
-.index-1-container {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    max-width: 100%;
-    margin: auto;
-    background-image: url('../images/background-1.jpg');
-    background-size: cover;
-    height: 0;
-    padding-bottom: 60%; /* Creating a responsive aspect ratio */
-}
-
-/* Styling for the .index-1-title */
-.index-1-title {
-    position: absolute;
-    top: 7%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 3vw;
-}
-
-/* Styling for the .index-1-slogan */
-.index-1-slogan {
-    position: absolute;
-    top: 12%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 1.2vw;
-}
-
-/* Styling for the .index-1-button */
-.index-1-button {
-    padding: 0.5vw 1vw;
-    border: none;
-    background-color: white;
-    cursor: pointer;
-    color: #473ca3;
-    transition: background-color 0.3s ease;
-    font-size: 1.2vw;
-    border-radius: 10px;
-    overflow: hidden;
-    display: flex;
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-/* Styling for the .index-1-button on hover */
-.index-1-button:hover {
-    background-color: #473ca3;
-    color: white;
-    border: 2px solid white;
-}
-
-/* Styling for the .index-1-button on click */
-.index-1-button:active {
-    background-color: #d0d0d0;
-    transform: translate(-50%, -50%) scale(0.95);
-}
-
-/* Styling for the .index-1-image */
-.index-1-image {
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-    border: 2px solid #fff;
-    border-radius: 10px;
-    width: 50%;
-    height: auto;
-}
-
-/*<----- index-2 ----->*/
-/* Styling for the .index-2 section */
-.index-2 {
-    background-image: url('../images/background-2.jpg');
-    background-size: cover;
-    padding: 30px 0;
-    color: white;
-}
-
-/* Styling for the .index-2-container */
-.index-2-container {
-    margin: auto;
-    padding-bottom: 25px;
-    padding-top: 25px;
-    margin-right: auto;
-}
-
-/* Styling for the .index-2-row */
-.index-2-row {
-    display: flex;
-    flex-wrap: wrap;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-    justify-content: space-around;
-    align-items: center;
-}
-
-/* Styling for the .index-2-col */
-.index-2-col {
-    flex-basis: calc(50% - 15px);
-    min-width: 300px;
-    margin-bottom: 30px;
-    padding-left: 5px;
-    padding-bottom: 5px;
-}
-
-/* Styling for small text inside .index-2-col */
-.index-2-col small {
-    font-size: 25px;
-}
-
-/* Styling for images within .index-2-col-img */
-.index-2-col-img img {
-    border: 2px solid #fff;
-    border-radius: 10px;
-}
-
-/* Styling for .index-2-col-img */
-.index-2-col-img {
-    min-width: 300px;
-    margin-bottom: 30px;
-    margin-top: 30px;
-}
-
-/* Styling for the .index-2-btn */
-.index-2-btn {
-    display: inline-block;
-    background: #6355d8;
-    color: #fff;
-    padding: 8px 30px;
-    margin-top: 10px;
-    border-radius: 10px;
-    transition: background 0.5s;
-}
-
-/* Styling for .index-2-btn on hover */
-.index-2-btn:hover {
-    background: white;
-    color: #6355d8;
-    border: 2px solid #6355d8;
-}
-
-/*<----- index-3 ----->*/
-/* Styling for the .index-3 section */
-.index-3 {
-    display: flex;
-    justify-content: center;
-}
-
-/* Styling for the .index-3-container */
-.index-3-container {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    max-width: 100%;
-    margin: auto;
-    background-image: url('../images/background-3.jpg');
-    background-size: cover;
-    height: 0;
-    padding-bottom: 60%;
-}
-
-/* Styling for the .index-3-title */
-.index-3-title {
-    position: absolute;
-    top: 9%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 4vw;
-}
-
-/* Styling for the .index-3-subtitle */
-.index-3-subtitle {
-    position: absolute;
-    top: 15%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 1.5vw;
-}
-
-/* Styling for the .toggle-button */
-.toggle-button {
-    display: flex;
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-/* Styling for .option-button */
-.option-button {
-    padding: 0.5vw 1vw;
-    border: none;
-    background-color: white;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    font-size: 1.2vw;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-/* Styling for #one-off-btn and #plan-btn */
-#one-off-btn,
-#plan-btn {
-    text-align: center;
-    cursor: pointer;
-    color: #473ca3;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-/* Styling for active #one-off-btn and #plan-btn */
-#one-off-btn.active,
-#plan-btn.active {
-    background-color: #6355d8;
-    color: white;
-}
-
-/* Styling for #plan-btn and #one-off-btn on hover */
-#plan-btn:hover,
-#one-off-btn:hover {
-    background-color: #6355d8;
-    color: #fff;
-    border: 2px solid #fff;
-}
-
-/* Styling for .ticket */
-.ticket {
-    flex: 33.33%;
-    height: auto;
-    width: auto;
-    padding: 20px;
-    margin: 20px;
-    background-color: white;
-    text-align: left;
-    border-radius: 10px;
-}
-
-/* Styling for .ticket-column */
-.ticket-column {
-    display: flex;
-    position: absolute;
-    padding: 0 1vw;
-    font-size: 1vw;
-    border-radius: 10px;
-    top: 62%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-/* Styling for .ticket-header */
-.ticket-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-/* Styling for .ticket-hot-label */
-.ticket-hot-label {
-    background-color: red;
-    color: white;
-    padding: 5px;
-    font-size: .8vw;
-    border-radius: 10px;
-}
-
-/* Styling for .ticket-column-button */
-.ticket-column-button {
-    padding: 0.5vw 1vw;
-    background-color: white;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    font-size: 1.2vw;
-    border-radius: 10px;
-    overflow: hidden;
-    display: flex;
-    color: #473ca3;
-    margin-top: 1.5vw;
-    margin-right: 10vw;
-    width: 100%;
-    justify-content: center;
-    border: 2px solid #473ca3;
-}
-
-/* Styling for .ticket-column-button on hover */
-.ticket-column-button:hover {
-    background-color: #473ca3;
-    color: white;
-    border: 2px solid white;
-}
-
-/* Styling for .ticket-column-button on active */
-.ticket-column-button:active {
-    background-color: #d0d0d0;
-}
-
-/* Styling for .ticket on hover */
-.ticket:hover {
-    background-color: #473ca3;
-    color: white;
-    transform: translateY(-10px);
-    border: 2px solid white;
-}
-
-/* Styling for .ticket h2 */
-.ticket h2 {
-    font-size: 2.5vw;
-}
-
-/* Styling for .price-value */
-.price-value {
-    font-weight: bold;
-}
-
-/* Styling for .price */
-.price {
-    font-size: 2.5vw;
-    display: inline-block;
-}
-
-/* Styling for .text-mini */
-.text-mini {
-    font-size: .7vw;
-}
-
-/* Styling for .text-plan */
-.text-plan {
-    font-size: .7vw;
-}
-
-/* Styling for .text-features */
-.text-features {
-    font-size: .8vw;
-}
-
-/* Styling for .ticket .tick-icon */
-.ticket .tick-icon {
-    font-size: 1.5vw;
-    color: green;
-    vertical-align: middle;
-}
-
-/* Styling for .ticket .cross-icon */
-.ticket .cross-icon {
-    font-size: 1.5vw;
-    color: red;
-    vertical-align: center;
-}
-
-/*<----- store page css below ----->*/
-/*<----- store-1 ----->*/
-/* Styling for the .store-1 section */
-.store-1 {
-    display: flex;
-    justify-content: center;
-}
-
-/* Styling for the .store-1-container */
-.store-1-container {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    max-width: 100%;
-    margin: auto;
-    background-image: url('../images/background-4.jpg');
-    background-size: cover;
-    height: 0;
-    padding-bottom: 60%;
-}
-
-/* Styling for the .store-1-title */
-.store-1-title {
-    position: absolute;
-    top: 7%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 3vw;
-}
-
-/* Styling for the .store-1-subtitle */
-.store-1-subtitle {
-    position: absolute;
-    top: 13%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 1.2vw;
-    text-align: center;
-}
-
-/* Styling for the .store-1-map */
-.store-1-map {
-    position: absolute;
-    top: 57%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-    border: 2px solid #fff;
-    border-radius: 10px;
-    width: 50%;
-    height: 75%;
-}
-
-/*<----- store-2 ----->*/
-/* Styling for the .store-2 section */
-.store-2 {
-    margin: auto;
-    max-width: 100%;
-    background-image: url('../images/background-5.jpg');
-    background-size: cover;
-    padding: 30px 0;
-    color: white;
-    font-size: 20px;
-}
-
-/* Styling for .store-2-row-2 */
-.store-2-row-2 {
-    justify-content: space-between;
-    margin: 100px auto 50px;
-}
-
-/* Styling for .store-2-row */
-.store-2-row {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-/* Styling for .store-2-col */
-.store-2-col {
-    flex-basis: 15%;
-    padding: 10px;
-    min-width: 200px;
-    margin-bottom: 50px;
-    transition: transform 0.5s;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-}
-
-/* Styling for .store-2-image-container */
-.store-2-image-container {
-    position: relative;
-    display: inline-block;
-}
-
-/* Styling for .store-2-finance-label */
-.store-2-finance-label {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background-color: #ff0000;
-    color: #ffffff;
-    padding: 5px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-/* Styling for .store-2-col img */
-.store-2-col img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
-/* Styling for .store-2-rating .fa */
-.store-2-rating .fa {
-    color: #6355d8;
-}
-
-/* Styling for .store-2-btn */
-.store-2-btn {
-    display: inline-block;
-    background: #6355d8;
-    color: #fff;
-    cursor: pointer;
-    padding: 8px 30px;
-    margin-top: 10px;
-    border-radius: 10px;
-    transition: background 0.5s;
-}
-
-/* Styling for .store-2-btn:hover */
-.store-2-btn:hover {
-    background: white;
-    color: #6355d8;
-    border: 2px solid #6355d8;
-}
-
-/* Hover effect for .store-2-col */
-.store-2-col:hover {
-    transform: translateY(-10px);
-}
-
-/*<----- store-3 ----->*/
-/* Styling for the .store-3 section */
-.store-3 {
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-    max-width: 100%;
-    background-image: url('../images/background-6.jpg');
-    background-size: cover;
-    color: white;
-    font-size: 1.2vw;
-    padding: 75px;
-}
-
-/* Styling for .store-3-content */
-.store-3-content {
-    background-color: #6355d8;
-    border-radius: 10px;
-    max-width: 100%;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-    border: 2px solid white;
-}
-
-/* Styling for .store-3-image */
-.store-3-image {
-    z-index: 1;
-    border-left: 2px solid white;
-    width: 50%;
-    height: auto;
-    max-width: 100%;
-    height: auto;
-    border-left: 2px solid white;
-}
-
-/* Styling for .store-3-text */
-.store-3-text {
-    flex: 1;
-    padding: 50px;
-    text-align: left;
-    box-sizing: border-box;
-}
-
-/* Styling for .store-3-btn */
-.store-3-btn {
-    display: inline-block;
-    background-color: white;
-    padding: 10px 20px;
-    margin-top: 30px;
-    border-radius: 10px;
-    transition: background-color 0.3s ease-in-out;
-    color: #6355d8;
-    cursor: pointer;
-}
-
-/* Styling for .store-3-btn:hover */
-.store-3-btn:hover {
-    background: #6355d8;
-    color: white;
-    border: 2px solid white;
-}
-
-/*<----- about page css below ----->*/
-/*<----- about-1 ----->*/
-/* Styling for the .about-1 section */
-.about-1 {
-    display: flex;
-    justify-content: center;
-}
-
-/* Styling for .about-1-container */
-.about-1-container {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    max-width: 100%;
-    margin: auto;
-    background-image: url('../images/background-7.jpg');
-    background-size: cover;
-    height: 0;
-    padding-bottom: 60%;
-}
-
-/* Styling for .about-1-title */
-.about-1-title {
-    position: absolute;
-    top: 7%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 3vw;
-}
-
-/* Styling for .about-1-subtitle */
-.about-1-subtitle {
-    position: absolute;
-    top: 13%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 1.2vw;
-    text-align: center;
-}
-
-/* Styling for .about-1-image */
-.about-1-image {
-    position: absolute;
-    top: 55%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-    border: 2px solid #fff;
-    border-radius: 10px;
-    width: 65%;
-    height: 65%;
-}
-
-/*<----- about-2 ----->*/
-/* Styling for the .about-2 section */
-.about-2 {
-    margin: auto;
-    max-width: 100%;
-    background-image: url('../images/background-8.jpg');
-    background-size: cover;
-    padding: 30px 0;
-    font-size: 20px;
-}
-
-/* Styling for the h1 within .about-2 */
-.about-2 h1 {
-    color: white;
-}
-
-/* Styling for .about-2-row-2 */
-.about-2-row-2 {
-    justify-content: space-between;
-    margin: 100px auto 50px;
-}
-
-/* Styling for .about-2-row */
-.about-2-row {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-/* Styling for .about-2-col */
-.about-2-col {
-    flex-basis: 15%;
-    padding: 10px;
-    min-width: 200px;
-    margin-bottom: 50px;
-    transition: transform 0.5s;
-    background-color: white;
-    border-radius: 10px;
-}
-
-/* Styling for .about-2-image-container */
-.about-2-image-container {
-    position: relative;
-    display: inline-block;
-}
-
-/* Styling for images within .about-2-col */
-.about-2-col img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
-/* Styling for .about-2-col on hover */
-.about-2-col:hover {
-    background-color: #473ca3;
-    color: white;
-    transform: translateY(-10px);
-    border: 2px solid #fff;
-}
-
-/*<----- about-3 ----->*/
-/* Styling for the .about-3 section */
-.about-3 {
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-    max-width: 100%;
-    background-image: url('../images/background-9.jpg');
-    background-size: cover;
-    color: white;
-    font-size: 1.2vw;
-    padding: 75px;
-}
-
-/* Styling for the .about-3-content */
-.about-3-content {
-    background-color: #6355d8;
-    border-radius: 10px;
-    max-width: 100%;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-    border: 2px solid white;
-}
-
-/* Styling for the .about-3-image */
-.about-3-image {
-    z-index: 1;
-    border-left: 2px solid white;
-    width: 50%;
-    height: auto;
-    max-width: 100%;
-    height: auto;
-}
-
-/* Styling for .about-3-text */
-.about-3-text {
-    flex: 1;
-    padding: 50px;
-    text-align: left;
-    box-sizing: border-box;
-}
-
-/* Styling for .about-3-btn */
-.about-3-btn {
-    display: inline-block;
-    background-color: white;
-    padding: 10px 20px;
-    margin-top: 30px;
-    border-radius: 10px;
-    transition: background-color 0.3s ease-in-out;
-    color: #6355d8;
-    cursor: pointer;
-}
-
-/* Styling for .about-3-btn on hover */
-.about-3-btn:hover {
-    background: #6355d8;
-    color: white;
-    border: 2px solid white;
-}
-
-/*<----- contact page css below ----->*/
-/*<----- contact-1 ----->*/
-/* Styling for the .contact-1 section */
-.contact-1 {
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    margin: auto;
-    max-width: 100%;
-    background-image: url('../images/background-10.jpg');
-    background-size: cover;
-    color: white;
-    font-size: 30px;
-    padding: 75px;
-    display: flex;
-    align-items: f /* This value is incomplete, it should be 'flex-start', 'flex-end', or 'center' */
-}
-
-/* Styling for input[type="text"] and select elements */
-input[type="text"], select {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    font-size: 20px;
-}
-
-/* Styling for textarea elements */
-textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    font-size: 20px;
-    resize: vertical;
-    height: 150px;
-    font-family: 'Poppins', sans-serif;
-}
-
-/* Styling for .contact-left-column */
-.contact-left-column {
-    flex: 1;
-    padding-right: 20px;
-}
-
-/* Styling for .contact-right-column */
-.contact-right-column {
-    flex: 1;
-    text-align: right;
-    padding-left: 20px;
-}
-
-/* Styling for .contact-1-image */
-.contact-1-image {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    border: 2px solid white;
-}
-
-/* Styling for label elements */
-label {
-    display: block;
-    text-align: left;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-/* Styling for .contact-submit-button */
-.contact-submit-button {
-    background-color: #6355d8;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    padding: 20px 20px;
-    font-size: 18px;
-    cursor: pointer;
-    width: 100%;
-}
-
-/* Styling for .contact-submit-button on hover */
-.contact-submit-button:hover {
-    background-color: white;
-    color: #6355d8;
-    border-radius: 10px;
-    border: 2px solid #6355d8;
-}
-
-/*<----- header ----->*/
-/* Styling for the .header section */
-.header {
-    width: 100%;
-    position: relative;
-}
-
-/* Styling for the .header-wrapper section */
-.header-wrapper {
-    width: 100%;
-    position: relative;
-    margin: 30px 0;
-}
-
-/* Styling for the .header-logo section */
-.header-logo {
-    display: flex;
-    margin-left: 20px;
-}
-
-/* Styling for the .header-text section */
-.header-text {
-    text-align: center;
-    position: absolute;
-    width: 100%;
-    top: 50%;
-    transform: translateY(-50%);
-    font-weight: bold;
-}
-
-/* Styling for adding underline to text hover */
-.header a:hover {
-    text-decoration: underline;
-}
-
-/* Styling for navigation unordered list */
-nav ul {
-    display: inline-block;
-    list-style-type: none;
-    padding: 0;
-}
-
-/* Styling for navigation list items */
-nav ul li {
-    display: inline-block;
-    margin-right: 20px;
-}
-
-/* Styling for anchor (link) elements */
-a {
     text-decoration: none;
-    color: #555;
-}
-
-/* Styling for horizontal rule (separator) */
-.header hr {
+    outline: none;
     border: none;
-    background: #b5b5b5;
-    height: 1px;
-    margin: 20px 0px;
+    transition: all .2s linear;
 }
 
-/* Styling for the header menu icon */
-.header-menu-icon {
-    width: 28px;
-    margin-left: 20px;
+*::selection {
+    background: var(--blue);
+    color: #189AD3;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+html::-webkit-scrollbar {
+    width: 1.4rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: #107DAC;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--blue);
+}
+
+body {
+    background: #005073;
+    overflow-x: hidden;
+    padding-left: 35rem;
+}
+
+section {
+    min-height: 100vh;
+    padding: 1rem;
+}
+
+.btn {
+    padding: .7rem 3rem;
+    background: #189AD3;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 1rem;
+    font-size: 2rem;
+    border-radius: 5rem;
+}
+
+.btn i {
+    padding: 0 .5rem;
+    font-size: 1.8rem;
+}
+
+.btn:hover {
+    background-color: #0047AB;
+}
+
+/* heading styles */
+
+.heading {
+    text-align: center;
+    margin: 0 6rem;
+    font-size: 4rem;
+    padding: 1rem;
+    border-bottom: .1rem solid #fff4;
+    color: #fff;
+}
+
+.heading span {
+    color: var(--blue);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    height: 100%;
+    width: 35rem;
+    background: #107DAC;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    text-align: center;
+}
+
+header .btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #189AD3;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+    font-size: 1.6rem;
+    border-radius: 5px;
+}
+
+#expandButton {
+    position: fixed;
+    top: 0;
+    left: 0;
+    font-size: 2rem;
+    color: #fff; 
+    cursor: pointer;
+}
+
+.collapsed #expandButton {
+    visibility: visible; 
+}
+
+header .user img {
+    height: 17rem;
+    width: 17rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: .7rem solid var(--blue);
+}
+
+header .user .name {
+    font-size: 3.5rem;
+    color: #fff;
+}
+
+header .user .post {
+    font-size: 2rem;
+    color: #eee;
+}
+
+header .navbar {
+    width: 100%;
+}
+
+header .navbar ul {
+    list-style: none;
+    padding: 1rem 3rem;
+}
+
+header .navbar ul li a {
+    display: block;
+    padding: 1rem;
+    margin: 1.5rem 0;
+    background: #189AD3;
+    color: #fff;
+    font-size: 2rem;
+    border-radius: 5rem;
+}
+
+header .navbar ul li a:hover {
+    background: #0047AB;
+}
+
+#menu {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    background: #189AD3;
+    color: #fff;
+    cursor: pointer;
+    font-size: 2.5rem;
+    padding: 1rem 1.5rem;
+    z-index: 1000;
     display: none;
 }
 
-/*<----- brands ----->*/
-/* Styling for the .brands section */
-.brands {
+/* home styles */
+
+.home {
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin: 0;
-    background: black;
-    border-top: 5px solid white;
-    border-bottom: 5px solid white;
+    flex-flow: column;
+    padding: 0 15rem;
 }
 
-/* Styling for the .brands-title section */
-.brands-title {
+.home h3 {
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+.home h1 {
+    font-size: 5rem;
+    color: #fff;
+}
+
+.home p {
+    font-size: 2rem;
+    color: #eee;
+    padding: 1rem 0;
+}
+
+.home h1 span {
+    color: var(--blue);
+}
+
+/* about styles */
+
+.about .row {
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
-    justify-content: space-around;
-    color: gray;
+    padding: 1rem 0;
 }
 
-/* Styling for the .brands-col section */
-.brands-col {
-    width: 160px;
-    display: inline-block;
-    vertical-align: middle;
+.about .row .info {
+    flex: 1 1 48rem;
+    padding: 2rem 1rem;
+    padding-left: 6rem;
 }
 
-/* Styling for images within .brands-col */
-.brands-col img {
-    width: 100%;
-    cursor: pointer;
-    filter: grayscale(100%);
-    padding-right: 10px;
+.about .row .info h3 {
+    font-size: 2rem;
+    color: #fff;
+    padding: 1rem 0;
+    font-weight: normal;
 }
 
-/* Styling for image hover effect */
-.brands-col img:hover {
-    filter: grayscale(0);
+.about .row .info h3 span {
+    color: var(--blue);
+    padding: 0 .5rem;
 }
 
-/* Styling for the .brands-container section */
-.brands-container {
-    max-width: 1080px;
-    margin: auto;
-    padding-left: 25px;
-    padding-right: 25px;
-    padding-bottom: 25px;
-    padding-top: 25px;
+.about .row .info .age {
+    color: #fff;
 }
 
-/*<----- testimonials ----->*/
-/* Styling for the .test-container section */
-.test-container {
+.about li {
+    color: #eee;
+    margin-left: 0.7rem;
+}
+
+.about .row .counter {
+    flex: 1 1 48rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.about .row .counter .box {
+    width: 20rem;
+    background: #107DAC;
+    text-align: center;
+    padding: 2rem;
+    margin: 2rem;
+}
+
+.about .row .counter .box span {
+    font-size: 4rem;
+    color: #fff;
+}
+
+.about .row .counter .box h3 {
+    font-size: 2rem;
+    color: #fff;
+}
+
+/* education styles */
+
+.education .box-container {
     display: flex;
     align-items: center;
-    justify-content: center;
-    background-color: black;
-    border-top: 5px solid white;
-    border-bottom: 5px solid white;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+    padding-left: 3rem;
 }
 
-/* Styling for the .testimonial section */
-.testimonial {
+.education .box-container .box {
+    width: 40rem;
+    margin: 4rem 1rem;
+    padding-left: 4rem;
+    border-left: .2rem solid #fff;
     position: relative;
-    max-width: 900px;
-    width: 100%;
-    padding: 50px 0;
-    overflow: hidden;
 }
 
-/* Styling for the .image within .testimonial */
-.testimonial .image {
-    height: 200px;
-    width: 200px;
-    object-fit: cover;
+.education .box-container .box span {
+    font-size: 1.3rem;
+    background: #107DAC;
+    color: #fff;
+    border-radius: 5rem;
+    padding: .5rem 2.5rem;
+}
+
+.education .box-container .box h3 {
+    font-size: 2.5rem;
+    padding-top: 1.5rem;
+}
+
+.education .box-container .box a {
+    color: #fff;
+}
+
+.education .box-container .box a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.education .box-container .box p {
+    font-size: 1.6rem;
+    color: #eee;
+    padding: 1rem 0;
+}
+
+.education .box-container .box li {
+    font-size: 1.6rem;
+    color: #eee;
+}
+
+.education .box-container .box i {
+    position: absolute;
+    top: -1.5rem;
+    left: -2.5rem;
+    height: 5rem;
+    width: 5rem;
     border-radius: 50%;
+    line-height: 5rem;
+    text-align: center;
+    font-size: 2rem;
+    color: #fff;
+    background: var(--blue);
 }
 
-/* Styling for the .slide within .testimonial */
-.testimonial .slide {
+/* portfolio styles */
+
+.portfolio .box-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    row-gap: 30px;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+}
+
+.portfolio .tab-buttons {
+    text-align: center;
+    margin: 0 6rem;
+    font-size: 4rem;
+    padding: 1rem;
+    border-bottom: .1rem solid #fff4;
+    color: #fff;
+}
+
+.portfolio .box-container .box {
+    height: 26rem;
+    width: 26rem;
+    border-radius: 1rem;
+    margin: 2rem;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.portfolio .box-container .box img {
     height: 100%;
     width: 100%;
+    object-fit: cover;
 }
 
-/* Styling for paragraphs within .slide */
-.slide p {
-    text-align: center;
-    padding: 0 160px;
-    font-size: 20px;
-    font-weight: 400;
-    color: white;
+.portfolio .box-container .box:hover img {
+    transform: scale(1.2);
 }
 
-/* Styling for the quote icon within .slide */
-.slide .quote-icon {
-    font-size: 30px;
-    color: #6355d8;
-}
+/* contact styles */
 
-/* Styling for the .details within .slide */
-.slide .details {
+.contact .row {
     display: flex;
-    flex-direction: column;
     align-items: center;
-}
-
-/* Styling for the name within .details */
-.details .name {
-    font-size: 15px;
-    font-weight: 600;
-    color: white;
-}
-
-/* Styling for the job title within .details */
-.details .job {
-    font-size: 13px;
-    font-weight: 400;
-    color: white;
-}
-
-/* Styling for navigation buttons */
-.nav-btn {
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-    transform: translateY(30px);
-    background-color: rgba(0, 0, 0, 0.1);
-    transition: 0.2s;
-}
-
-/* Styling for navigation button hover effect */
-.nav-btn:hover {
-    background-color: rgba(200, 200, 200, 0.4);
-}
-
-/* Styling for icons within navigation buttons */
-.nav-btn::after, .nav-btn::before {
-    font-size: 20px;
-    color: #6355d8;
-}
-
-/* Styling for the pagination bullet */
-.swiper-pagination-bullet {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* Styling for the active pagination bullet */
-.swiper-pagination-bullet-active {
-    background-color: #6355d8;
-}
-
-/*<----- footer ----->*/
-/* Styling for the .footer-content section */
-.footer-content {
-    display: flex;
-    margin: 0 auto;
-    margin-top: 50px;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
-/* Styling for the .container within .footer-content */
-.container {
-    max-width: 100%;
-    margin: auto;
+.contact .row .content {
+    flex: 1 1 30rem;
+    padding: 4rem;
+    padding-bottom: 0;
 }
 
-/* Styling for the .logo within .footer-content */
-.footer-content .logo {
-    margin-right: 20px;
+.contact .row form {
+    flex: 1 1 45rem;
+    padding: 2rem;
+    margin: 2rem;
+    margin-bottom: 4rem;
 }
 
-/* Styling for the .social-media within .footer-content */
-.footer-content .social-media a {
-    text-decoration: none; 
-    color: #555; 
-    transition: color 0.3s ease; 
+.contact .row form .box {
+    padding: 1.6rem;
+    margin: 1rem 0;
+    background: white;
+    color: black;
+    text-transform: none;
+    font-size: 1.7rem;
+    width: 100%;
 }
 
-/* Styling for the .social-media hover within .footer-content */
-.footer-content .social-media a:hover {
-    color: #007bff; 
-    text-decoration: none;
+.contact .row form .box::placeholder {
+    text-transform: capitalize;
 }
 
-/* Styling for images within .footer-content */
-.footer-content img {
-    max-width: 100px;
+.contact .row form .message {
+    height: 15rem;
+    resize: none;
 }
 
-/* Styling for unordered lists within .footer-content */
-.footer-content ul {
-    display: inline-block;
-    list-style-type: none;
+.contact .row .content .title {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 3rem;
+    padding-bottom: 2rem;
 }
 
-/* Styling for adding underline to text hover */
-.footer a:hover {
+.contact .row .content .info h3 {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    color: #eee;
+    padding: 1rem 0;
+    font-weight: normal;
+    text-transform: none;
+}
+
+.contact .row .content .info h3 i {
+    padding-right: 1rem;
+    color: var(--blue);
+}
+
+.top {
+    position: fixed;
+    bottom: .5rem;
+    right: 1rem;
+    z-index: 100;
+    display: none;
+}
+
+/* project-details styles */
+
+.project {
+    display: none;
+}
+
+.project .box-container {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+    margin-left: 6rem;
+}
+
+.project .info {
+    flex: 1 1 48rem;
+    padding: 2rem 1rem;
+    padding-left: 6rem;
+}
+
+.project .info a {
+    color: var(--blue);
+}
+
+.project .info a:hover {
     text-decoration: underline;
 }
 
-/* Styling for list items within .footer-content */
-.footer-content ul li {
-    display: inline-block;
-    margin-right: 20px;
-    font-weight: bold;
+.project ul {
+    margin-left: 2rem;
 }
 
-/* Styling for the horizontal line within .footer */
-.footer hr {
-    border: none;
-    background: #b5b5b5;
-    height: 1px;
-    margin: 20px 0;
-    margin-top: 50px;
-}
-
-/* Styling for the copyright text */
-.copyright {
-    color: #555;
-    padding-bottom: 10px;
-    text-align: center;
-}
-
-/*<----- pop-up dialog ----->*/
-/* Styles for a popup container */
-.popup-container {
-    position: relative;
-    display: inline-block;
-}
-
-/* Styles for the popup text */
-.popup-container .popuptext {
-    visibility: hidden;
-    width: 160px;
-    background-color: #555;
+.project .info h3 {
+    font-size: 2rem;
     color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 8px;
-    position: absolute;
-    z-index: 1;
-    bottom: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-top: 10px;
+    padding: 1rem 0;
+    font-weight: normal;
 }
 
-/* Create an arrow-like shape for the popup */
-.popup-container .popuptext::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: #555 transparent transparent transparent;
+.project .info h3 span {
+    color: var(--blue);
+    padding: 0 .5rem;
 }
 
-/* Show the popup */
-.popup-container .show {
-    visibility: visible;
-    -webkit-animation: fadeIn 1s;
-    animation: fadeIn 1s;
+/* slideshow container */
+
+.slideshow-container {
+  max-width: 500px;
+  position: relative;
+  margin: auto;
+  margin-top: 2rem;
 }
 
-/*<----- screen size changes ----->*/
-/* Media query for screens with a maximum width of 800px */
-@media only screen and (max-width: 800px) {
-    /* Adjust the header text alignment and layout for smaller screens */
-    .header-text {
-        text-align: right;
-        padding-right: 20px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        z-index: 2;
+.mySlides {
+  display: none;
+  margin-bottom: 1rem;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #189AD3;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* media queries */
+
+@media (max-width:1200px) {
+
+    html {
+        font-size: 55%;
     }
 
-    /* Style the navigation menu for smaller screens */
-    nav ul {
-        position: absolute;
-        top: 70px;
-        right: 0;
-        background: #333;
+    .home {
+        padding: 1rem 4rem;
+    }
+
+}
+
+@media (max-width:991px) {
+
+    header {
+        left: -120%;
+    }
+
+    #menu {
+        display: block;
+    }
+
+    header.toggle {
+        left: 0%;
+    }
+
+    body {
+        padding: 0;
+    }
+
+}
+
+@media (max-width:768px) {
+
+    html {
+        font-size: 50%
+    }
+
+}
+
+@media (max-width:390px) {
+
+    header {
+        width: 100vw;
+    }
+
+    .heading {
+        margin: 0 3rem;
+    }
+
+    .about .row .counter .box {
         width: 100%;
-        overflow: hidden;
-        transition: max-height 0.5s;
     }
 
-    /* Style individual list items in the navigation menu */
-    nav ul li {
-        display: block;
-        margin-right: 30px;
-        margin-top: 10px;
-        margin-bottom: 10px;
+    .education .box-container .box {
+        width: 100%;
     }
 
-    /* Style the links in the navigation menu */
-    nav ul li a {
-        color: #fff;
+    .portfolio .box-container .box {
+        width: 100%;
     }
 
-    /* Display the header menu icon for smaller screens */
-    .header-menu-icon {
-        display: block;
-        cursor: pointer;
+    .contact .row form {
+        margin: 3rem 0;
     }
 
-    /* Adjust layout for index-2 section on smaller screens */
-    .index-2-row {
-        text-align: center;
-    }
-
-    /* Make index-2 columns take full width on smaller screens */
-    .index-2-col {
-        flex-basis: 100%;
-    }
-
-    /* Adjust padding for testimonial slide paragraphs on smaller screens */
-    .slide p {
-        padding: 0 20px;
-    }
-
-    /* Hide navigation buttons on smaller screens */
-    .nav-btn {
-        display: none;
-    }
-    
-    /* Adjust contact form on smaller screens */
-    .contact-1 {
-        font-size: 20px;
-    }
-    
-    /* Adjust contact button on smaller screens */
-    .contact-submit-button {
-        font-size: 16px;
-    }
-}
-
-/* Media query for screens with a maximum width of 1340px */
-@media (max-width: 1340px) {
-    /* Hide certain images in store-3, about-3, and contact-1 sections */
-    .store-3-image, .about-3-image, .contact-1-image {
-        display: none;
-    }
 }
