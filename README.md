@@ -11,7 +11,7 @@
 
   <p align="center">
       Hi, thanks for checking out the project files for my personal portfolio. Here you will find all the related code and resources
-      I used to create a captivating, responsive, and informative portfolio where I showcase my projects.
+      I used to create a captivating, responsive, and informative portfolio for showcasing my projects.
     <br />
     <a href="https://github.com/Tipzilla/tipzilla.github.io"><strong>Explore the docs »</strong></a>
     <br />
