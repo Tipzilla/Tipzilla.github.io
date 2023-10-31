@@ -3,9 +3,6 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/Tipzilla/tipzilla.github.io">
-    <img src="images/pic.jpg" alt="Logo" width="80" height="80">
-  </a>
 
 <h3 align="center">My Personal Portfolio</h3>
 
