@@ -480,6 +480,17 @@ header .navbar ul li a:hover {
     padding: 0 .5rem;
 }
 
+.project .inline-link {
+    font-size: 2rem;
+    margin-left: 10px; /* Adjust the spacing as needed */
+    color: #fff; /* Set the link color */
+    text-decoration: none; /* Remove the underline */
+}
+
+.project .inline-link:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
 /* slideshow container */
 
 .slides-1, .slides-2 {display: none}
