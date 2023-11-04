@@ -539,7 +539,7 @@
 
             </div>
 
-            <form action="https://formsubmit.co/f003fbd68b03c252f02b05bac7c74385" method="post" id="contact-form">
+            <form action="https://formsubmit.co/f003fbd68b03c252f02b05bac7c74385" method="post">
 
                 <!-- honeypot -->
                 <input type="text" name="_honey" style="display: none;">
@@ -547,7 +547,7 @@
                 <!-- disable captcha -->
                 <input type="hidden" name="_captcha" value="false">
 
-                <input type="hidden" name="_next" value="">
+                <input type="hidden" name="_next" value="#success">
 
                 <!-- contact form -->
                 <input name="name" type="text" id="name" placeholder="name" class="box" required>
@@ -568,34 +568,14 @@
                 <textarea name="message" id="message" cols="30" rows="10" class="box message" placeholder="message" required></textarea>
                 <button type="submit" class="btn"> Send <i class="fas fa-paper-plane"></i></button>
 
-                <div id="success-message" style="display: none;">
-                    Message sent successfully, we will be in touch soon!
-                </div>
-
-                <script>
-                    // Get a reference to the form and the success message element
-                    const form = document.getElementById("contact-form");
-                    const successMessage = document.getElementById("success-message");
-                
-                    // Add an event listener for the form submission
-                    form.addEventListener("submit", function (event) {
-                        event.preventDefault(); // Prevent the form from actually submitting
-                
-                        // You can perform form validation here if needed
-                
-                        // Assuming the form submission is successful, hide the form and display the success message
-                        // You can replace this with actual form submission handling using AJAX or other methods.
-                        // For simplicity, I'm using a setTimeout to simulate a successful submission.
-                        setTimeout(function () {
-                            form.style.display = "none"; // Hide the form
-                            successMessage.style.display = "block"; // Display the success message
-                        }, 1000); // You can adjust the delay (1 second in this example)
-                    });
-                </script>
             </form>
 
         </div>
 
+    </section>
+
+    <section id="success" style="display: none;">
+        Message sent successfully, we will be in touch soon!
     </section>
 <!----- footer ----->
     <a href="#home" class="top">
