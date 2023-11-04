@@ -547,8 +547,6 @@
                 <!-- disable captcha -->
                 <input type="hidden" name="_captcha" value="false">
 
-                <input type="hidden" name="_next" value="#success">
-
                 <!-- contact form -->
                 <input name="name" type="text" id="name" placeholder="name" class="box" required>
                 <input name="email" type="email" id="email" placeholder="email" class="box" required>
@@ -570,13 +568,48 @@
 
             </form>
 
+            <div id="success-message" style="display: none;">
+                Message sent successfully, we will be in touch soon!
+            </div>
+
         </div>
 
     </section>
 
-    <section id="success" style="display: none;">
-        Message sent successfully, we will be in touch soon!
-    </section>
+    <script>
+        document.querySelector("form").addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent the default form submission
+    
+            // Get form data
+            const formData = new FormData(document.querySelector("form"));
+    
+            // Convert form data to a plain object
+            const formObject = {};
+            formData.forEach((value, key) => {
+                formObject[key] = value;
+            });
+    
+            // Make a POST request using fetch
+            fetch("https://formsubmit.co/f003fbd68b03c252f02b05bac7c74385", {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(formObject)
+            })
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+                    // Display success message or perform any additional actions on success
+                    document.getElementById("success-message").style.display = "block";
+                })
+                .catch(error => {
+                    console.log(error);
+                    // Handle errors here if needed
+                });
+        });
+    </script>
 <!----- footer ----->
     <a href="#home" class="top">
         <img src="images/scroll-top-img.png" alt="">
