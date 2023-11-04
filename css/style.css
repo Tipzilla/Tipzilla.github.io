@@ -110,19 +110,6 @@ header .btn {
     border-radius: 5px;
 }
 
-#expandButton {
-    position: fixed;
-    top: 0;
-    left: 0;
-    font-size: 2rem;
-    color: #fff; 
-    cursor: pointer;
-}
-
-.collapsed #expandButton {
-    visibility: visible; 
-}
-
 header .user img {
     height: 17rem;
     width: 17rem;
