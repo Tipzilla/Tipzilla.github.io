@@ -81,7 +81,7 @@ updateAge(); // Initial age update
 // Each element represents the current slide index for a specific slideshow
 let slideIndex = [1, 1, 1, 1, 1]; 
 // IDs of the HTML elements for each slideshow
-let slideId = ["slides-1", "slides-2", "slides-3", "slides-4", "slides-5"]; 
+let slideId = ["slides-project-1", "slides-project-2", "slides-project-3", "slides-project-5", "slides-project-6"]; 
 
 // Initialize and display the first slide for each slideshow
 // Initialize and display the first slide for the first slideshow
@@ -90,9 +90,9 @@ showSlides(1, 0);
 showSlides(1, 1); 
 // Initialize and display the first slide for the third slideshow
 showSlides(1, 2); 
-
+// Initialize and display the first slide for the fourth slideshow
 showSlides(1, 3); 
-
+// Initialize and display the first slide for the fifth slideshow
 showSlides(1, 4); 
 
 // Function to move to the next or previous slide for a specific slideshow
