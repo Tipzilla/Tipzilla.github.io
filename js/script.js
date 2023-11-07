@@ -224,3 +224,66 @@ document.getElementById("cv-download").addEventListener("click", function() {
     // Simulate a click event on the anchor element, triggering the download action
     anchor.click();
 });
+
+
+
+const repositories = [
+  {
+    owner: "Tipzilla",
+    repo: "LMS-GUI-App",
+    id: "last-updated-project-1", // ID of the "last-updated" element for this repository
+  },
+  {
+    owner: "Tipzilla",
+    repo: "Starlight-Space-Journeys",
+    id: "last-updated-project-2", // ID of the "last-updated" element for this repository
+  },
+  {
+    owner: "Tipzilla",
+    repo: "Zumba-Co",
+    id: "last-updated-project-3", // ID of the "last-updated" element for this repository
+  },
+  {
+    owner: "Tipzilla",
+    repo: "Simply-Midwifery",
+    id: "last-updated-project-5", // ID of the "last-updated" element for this repository
+  },
+  {
+    owner: "Tipzilla",
+    repo: "Style-Supreme",
+    id: "last-updated-project-6", // ID of the "last-updated" element for this repository
+  },
+  // Add more repositories as needed
+];
+
+async function fetchLastUpdated(owner, repo, id) {
+  try {
+      const repoUrl = `https://api.github.com/repos/${owner}/${repo}`;
+      const response = await fetch(repoUrl);
+      const repoData = await response.json();
+
+      // Now, fetch the latest commit information
+      const commitsUrl = `https://api.github.com/repos/${owner}/${repo}/commits`;
+      const commitsResponse = await fetch(commitsUrl);
+      const commitsData = await commitsResponse.json();
+
+      if (commitsData.length > 0) {
+          // Get the date of the latest commit
+          const lastCommitDate = new Date(commitsData[0].commit.author.date);
+          const formattedDate = lastCommitDate.toLocaleDateString("en-US", {
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+          });
+          document.getElementById(id).textContent = `Updated on ${formattedDate}`;
+      } else {
+          console.log(`No commits found for ${owner}/${repo}`);
+      }
+  } catch (error) {
+      console.error(`Error fetching data for ${owner}/${repo}:`, error);
+  }
+}
+
+repositories.forEach(repo => {
+  fetchLastUpdated(repo.owner, repo.repo, repo.id);
+});
