@@ -1,3 +1,5 @@
+// --- Function for header management --- //
+
 // Wait for the document to be fully loaded and ready
 $(document).ready(function() {
 
@@ -31,9 +33,8 @@ $(document).ready(function() {
     });
 });
 
+// --- Function to calculate age based on a given birthdate --- //
 
-
-// Function to calculate age based on a given birthdate
 function calculateAge(birthdate) {
     // Get the current date
     var today = new Date();
@@ -56,6 +57,8 @@ function calculateAge(birthdate) {
     return age;
 }
 
+// --- Function for setting and updating birthdate --- //
+
 // Set the birthdate in the format YYYY-MM-DD
 var birthdate = '1998-12-13'; 
 
@@ -75,7 +78,7 @@ function updateAge() {
 // Initially update the age when the page loads
 updateAge(); // Initial age update
 
-
+// --- Function for slides --- //
 
 // Initialize slideIndex and slideId arrays for multiple slideshows
 // Each element represents the current slide index for a specific slideshow
@@ -128,7 +131,7 @@ function showSlides(n, no) {
 // 3. Create corresponding HTML elements with the new ID for the new slideshow.
 // 4. Add controls (e.g., previous and next buttons, dots) for the new slideshow and make sure to use the correct onclick function with the updated no parameter.
 
-
+// --- Function for portfolio images --- //
 
 // Add a DOMContentLoaded event listener to ensure the document is fully loaded
 document.addEventListener("DOMContentLoaded", function () {
@@ -158,7 +161,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-
+// --- Function for portfolio buttons --- //
 
 // Add a click event listener to all elements with the class "btn"
 $(".btn").click(function() {
@@ -185,10 +188,10 @@ $(".btn").click(function() {
     }
 });
 
+// --- Function for project download --- //
 
-
-// Add a click event listener to the element with the ID "project-4-download"
-document.getElementById("project-4-download").addEventListener("click", function() {
+// Add a click event listener to the element with the ID "download-ATM-Machine"
+document.getElementById("download-ATM-Machine").addEventListener("click", function() {
     // Define the file URL you want to download
     const fileURL = "downloads/ATM Machine.py";
   
@@ -205,10 +208,10 @@ document.getElementById("project-4-download").addEventListener("click", function
     anchor.click();
 });
 
+// --- Function for CV download --- //
 
-
-// Add a click event listener to the element with the ID "cv-download"
-document.getElementById("cv-download").addEventListener("click", function() {
+// Add a click event listener to the element with the ID "download-CV"
+document.getElementById("download-CV").addEventListener("click", function() {
     // Define the file URL you want to download
     const fileURL = "downloads/Hamish Getty's CV.pdf";
   
@@ -225,65 +228,68 @@ document.getElementById("cv-download").addEventListener("click", function() {
     anchor.click();
 });
 
+// --- Function for "last-updated" element --- //
 
+document.addEventListener("DOMContentLoaded", function () {
+  // Define an array of projects with their GitHub repository information
+  const projects = [
+    { repo: 'LMS-GUI-App' },
+    { repo: 'Starlight-Space-Journeys' },
+    { repo: 'Zumba-Co' },
+    { repo: 'Simply-Midwifery' },
+    { repo: 'Style-Supreme' },
+    // Add more as needed
+  ];
 
-const repositories = [
-  {
-    owner: "Tipzilla",
-    repo: "LMS-GUI-App",
-    id: "last-updated-project-1", // ID of the "last-updated" element for this repository
-  },
-  {
-    owner: "Tipzilla",
-    repo: "Starlight-Space-Journeys",
-    id: "last-updated-project-2", // ID of the "last-updated" element for this repository
-  },
-  {
-    owner: "Tipzilla",
-    repo: "Zumba-Co",
-    id: "last-updated-project-3", // ID of the "last-updated" element for this repository
-  },
-  {
-    owner: "Tipzilla",
-    repo: "Simply-Midwifery",
-    id: "last-updated-project-5", // ID of the "last-updated" element for this repository
-  },
-  {
-    owner: "Tipzilla",
-    repo: "Style-Supreme",
-    id: "last-updated-project-6", // ID of the "last-updated" element for this repository
-  },
-  // Add more repositories as needed
-];
+  // Loop through each project
+  projects.forEach(project => {
+    const repoOwner = project.owner;
+    const repoName = project.repo;
 
-async function fetchLastUpdated(owner, repo, id) {
-  try {
-      const repoUrl = `https://api.github.com/repos/${owner}/${repo}`;
-      const response = await fetch(repoUrl);
-      const repoData = await response.json();
+    // Get the elements where you want to display the last updated date and languages
+    const lastUpdatedElement = document.getElementById(`last-updated-${repoName}`);
+    const languagesElement = document.getElementById(`languages-${repoName}`);
 
-      // Now, fetch the latest commit information
-      const commitsUrl = `https://api.github.com/repos/${owner}/${repo}/commits`;
-      const commitsResponse = await fetch(commitsUrl);
-      const commitsData = await commitsResponse.json();
+    // Use the GitHub API to get information about the repository
+    fetch(`https://api.github.com/repos/tipzilla/${repoName}/languages`)
+      .then(response => response.json())
+      .then(data => {
+        // Calculate the total byte size of the project
+        const totalSize = Object.values(data).reduce((acc, size) => acc + size, 0);
 
-      if (commitsData.length > 0) {
-          // Get the date of the latest commit
-          const lastCommitDate = new Date(commitsData[0].commit.author.date);
-          const formattedDate = lastCommitDate.toLocaleDateString("en-US", {
-              year: "numeric",
-              month: "long",
-              day: "numeric",
-          });
-          document.getElementById(id).textContent = `Updated on ${formattedDate}`;
-      } else {
-          console.log(`No commits found for ${owner}/${repo}`);
-      }
-  } catch (error) {
-      console.error(`Error fetching data for ${owner}/${repo}:`, error);
-  }
-}
+        // Calculate the percentage of each language and format it
+        const languagePercentages = Object.entries(data).map(([language, size]) => {
+          const percentage = ((size / totalSize) * 100).toFixed(2);
+          return `${language}: ${percentage}%`;
+        });
 
-repositories.forEach(repo => {
-  fetchLastUpdated(repo.owner, repo.repo, repo.id);
+        // Update the HTML content with the fetched language percentages
+        languagesElement.textContent = `${languagePercentages.join(', ')}`;
+      })
+      .catch(error => {
+        console.error(`Error fetching data for ${repoName}: ${error.message}`);
+        languagesElement.textContent = 'Error fetching languages';
+      });
+
+    // Fetch and display the last updated date similarly
+    fetch(`https://api.github.com/repos/tipzilla/${repoName}`)
+      .then(response => response.json())
+      .then(data => {
+        const lastCommitDate = new Date(data.updated_at);
+
+        // Format the date as "Month Day, Year"
+        const formattedDate = lastCommitDate.toLocaleDateString('en-US', {
+          month: 'long',
+          day: 'numeric',
+          year: 'numeric',
+        });
+
+        // Update the HTML content with the fetched last updated date
+        lastUpdatedElement.textContent = `${formattedDate}`;
+      })
+      .catch(error => {
+        console.error(`Error fetching data for ${repoName}: ${error.message}`);
+        lastUpdatedElement.textContent = 'Error fetching last updated date';
+      });
+  });
 });

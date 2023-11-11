@@ -467,11 +467,6 @@ header .navbar ul li a:hover {
     padding: 0 .5rem;
 }
 
-.project .info .last-updated {
-    color: #fff; 
-    padding: 0;
-}
-
 .project .inline-link {
     font-size: 2rem;
     margin-left: 10px; 
