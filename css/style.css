@@ -67,6 +67,21 @@ section {
     background-color: #0047AB;
 }
 
+.inline-link {
+    font-size: 2rem;
+    margin-left: 10px; 
+    color: #fff; 
+    text-decoration: none; 
+}
+
+.inline-link:hover {
+    text-decoration: underline; 
+}
+
+.inline-link i {
+    padding: 1rem;
+}
+
 /* heading styles */
 
 .heading {
@@ -465,17 +480,6 @@ header .navbar ul li a:hover {
 .project .info h3 span {
     color: var(--blue);
     padding: 0 .5rem;
-}
-
-.project .inline-link {
-    font-size: 2rem;
-    margin-left: 10px; 
-    color: #fff; 
-    text-decoration: none; 
-}
-
-.project .inline-link:hover {
-    text-decoration: underline; 
 }
 
 /* slideshow container */

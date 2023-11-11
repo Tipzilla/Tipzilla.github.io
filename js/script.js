@@ -208,12 +208,12 @@ document.getElementById("download-ATM-Machine").addEventListener("click", functi
     anchor.click();
 });
 
-// --- Function for CV download --- //
+// --- Function for Resume download --- //
 
-// Add a click event listener to the element with the ID "download-CV"
-document.getElementById("download-CV").addEventListener("click", function() {
+// Add a click event listener to the element with the ID "download-Resume"
+document.getElementById("download-Resume").addEventListener("click", function() {
     // Define the file URL you want to download
-    const fileURL = "downloads/Hamish Getty's CV.pdf";
+    const fileURL = "downloads/Hamish Getty's Resume.pdf";
   
     // Create an anchor element
     const anchor = document.createElement("a");
@@ -228,7 +228,7 @@ document.getElementById("download-CV").addEventListener("click", function() {
     anchor.click();
 });
 
-// --- Function for "last-updated" element --- //
+// --- Function for "languages" and "last-updated" elements --- //
 
 document.addEventListener("DOMContentLoaded", function () {
   // Define an array of projects with their GitHub repository information
