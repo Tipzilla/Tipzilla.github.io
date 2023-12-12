@@ -250,10 +250,17 @@ document.addEventListener("DOMContentLoaded", function () {
     const lastUpdatedElement = document.getElementById(`last-updated-${repoName}`);
     const languagesElement = document.getElementById(`languages-${repoName}`);
 
-    // Use the GitHub API to get information about the repository
-    fetch(`https://api.github.com/repos/tipzilla/${repoName}/languages`)
-      .then(response => response.json())
-      .then(data => {
+    // Define your GitHub personal access token
+    const accessToken = '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';
+
+  // Use the GitHub API to get information about the repository, include the access token in the headers
+    fetch(`https://api.github.com/repos/tipzilla/${repoName}/languages`, {
+        headers: {
+          Authorization: `Bearer ${accessToken}`,
+        },
+      })
+        .then(response => response.json())
+        .then(data => {
         // Calculate the total byte size of the project
         const totalSize = Object.values(data).reduce((acc, size) => acc + size, 0);
 
@@ -271,10 +278,14 @@ document.addEventListener("DOMContentLoaded", function () {
         languagesElement.textContent = 'Error fetching languages';
       });
 
-    // Fetch and display the last updated date similarly
-    fetch(`https://api.github.com/repos/tipzilla/${repoName}`)
-      .then(response => response.json())
-      .then(data => {
+      // Fetch and display the last updated date similarly, include the access token in the headers
+      fetch(`https://api.github.com/repos/tipzilla/${repoName}`, {
+        headers: {
+          Authorization: `Bearer ${accessToken}`,
+        },
+      })
+        .then(response => response.json())
+        .then(data => {
         const lastCommitDate = new Date(data.updated_at);
 
         // Format the date as "Month Day, Year"
