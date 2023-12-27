@@ -259,12 +259,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // Use the GitHub API to get information about the repository, include the access token in the headers
     fetch(`https://api.github.com/repos/tipzilla/${repoName}/languages`, {
 
-      // * Cannot do this until I move the portfolio to it's own domain as exposing the token is a security vulnerability: *
-
-      headers: {
-        Authorization: `Bearer ${accessToken}`,
-      },
-
       })
         .then(response => response.json())
         .then(data => {
@@ -287,12 +281,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Fetch and display the last updated date similarly, include the access token in the headers
       fetch(`https://api.github.com/repos/tipzilla/${repoName}`, {
-
-      // * Cannot do this until I move the portfolio to it's own domain as exposing the token is a security vulnerability: *
-
-      headers: {
-        Authorization: `Bearer ${accessToken}`,
-      },
 
       })
         .then(response => response.json())
