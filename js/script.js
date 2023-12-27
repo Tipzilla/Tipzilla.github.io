@@ -254,16 +254,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // * Cannot do this until I move the portfolio to it's own domain as exposing the token is a security vulnerability (update HTML too): *
 
-    // const accessToken = '';
+    const accessToken = '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';
 
     // Use the GitHub API to get information about the repository, include the access token in the headers
     fetch(`https://api.github.com/repos/tipzilla/${repoName}/languages`, {
 
       // * Cannot do this until I move the portfolio to it's own domain as exposing the token is a security vulnerability: *
 
-      // headers: {
-        // Authorization: `Bearer ${accessToken}`,
-      // },
+      headers: {
+        Authorization: `Bearer ${accessToken}`,
+      },
 
       })
         .then(response => response.json())
@@ -290,9 +290,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // * Cannot do this until I move the portfolio to it's own domain as exposing the token is a security vulnerability: *
 
-      // headers: {
-        // Authorization: `Bearer ${accessToken}`,
-      // },
+      headers: {
+        Authorization: `Bearer ${accessToken}`,
+      },
 
       })
         .then(response => response.json())
