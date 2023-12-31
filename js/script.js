@@ -303,3 +303,33 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   });
 });
+
+// --- Function for sorting the projects in a specified order --- //
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Wait for the DOM content to be fully loaded
+
+  // Find the portfolio section
+  var portfolioSection = document.querySelector(".portfolio");
+
+  // Find the box container within the portfolio section
+  var boxContainer = portfolioSection.querySelector(".box-container");
+
+  // Find all the boxes within the box container
+  var boxes = boxContainer.querySelectorAll(".box");
+
+  // Convert NodeList to array for easier sorting
+  var boxesArray = Array.from(boxes);
+
+  // Sort the array based on the data-order attribute
+  boxesArray.sort(function (a, b) {
+    var orderA = parseInt(a.getAttribute("data-order"));
+    var orderB = parseInt(b.getAttribute("data-order"));
+    return orderA - orderB;
+  });
+
+  // Append the sorted boxes back to the box container
+  boxesArray.forEach(function (box) {
+    boxContainer.appendChild(box);
+  });
+});
