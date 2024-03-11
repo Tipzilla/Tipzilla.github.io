@@ -235,7 +235,6 @@ document.addEventListener("DOMContentLoaded", function () {
     { repo: 'LMS-GUI-App' },
     { repo: 'Starlight-Space-Journeys' },
     { repo: 'Zumba-Co' },
-    { repo: 'Simply-Midwifery' },
     { repo: 'Style-Supreme' },
     { repo: 'Word-Data-Manager' },
     // Add more as needed
@@ -254,7 +253,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // * Cannot do this until I move the portfolio to it's own domain as exposing the token is a security vulnerability (update HTML too): *
 
-    const accessToken = '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';
+    const accessToken = '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';
 
     // Use the GitHub API to get information about the repository, include the access token in the headers
     fetch(`https://api.github.com/repos/tipzilla/${repoName}/languages`, {
