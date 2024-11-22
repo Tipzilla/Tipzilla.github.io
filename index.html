@@ -40,7 +40,7 @@
         <h1>I'm <span>Hamish Getty</span></h1>
         <p>Welcome to my portfolio! I'm a passionate Software Engineer dedicated to crafting innovative systems and furthering the industry. 
             With a strong background in front and back end development, I thrive on solving complex problems and turning 
-            ideas fully functioning solutions. Explore my projects and discover how I can bring value to your next software endeavor!</p>
+            ideas into fully functioning solutions. Explore my projects and discover how I can bring value to your next software endeavor!</p>
         <a href="#about"><button class="btn">About Me <i class="fas fa-user"></i></button></a>
 
     </section>
@@ -57,17 +57,21 @@
                 <h3> <span> Qualification : </span> Diploma in Applied Information Technology </h3>
                 <h3> <span> Language : </span> English </h3>
                 <h3> <span> Programming Languages : </span> 
-                    <li>Python</li>
-                    <li>Java</li>
-                    <li>JavaScript</li> 
-                    <li>C#</li>  
+                    <li><img src="/icons/python.png"> Python</li>
+                    <li><img src="/icons/java.png"> Java</li>
+                    <li><img src="/icons/javascript.png"> JavaScript</li> 
+                    <li><img src="/icons/csharp.png"> C#</li>  
                 </h3>
                 <h3> <span> Web Development : </span>                     
-                    <li>HTML/CSS</li>
-                    <li>Vue.js</li>
-                    <li>Node.js</li> 
+                    <li><img src="/icons/html.png"> HTML</li>
+                    <li><img src="/icons/css.png"> CSS</li>
+                    <li><img src="/icons/php.png"> PHP</li>
+                    <li><img src="/icons/vue.png"> Vue.js</li>
                 </h3>
-                <h3> <span> Database Management : </span> MySQL </h3>
+                <h3> <span> Database Management : </span>                     
+                    <li><img src="/icons/mysql.png"> MySQL</li>
+
+                </h3>
                 <h3> <span> Version Control : </span> Git and GitHub </h3>
                 <h3> <span> Software Development Methodologies : </span> Agile </h3>
                 <h3> <span> Other Skills : </span>                     
@@ -79,7 +83,7 @@
 
                 <div class="button-link">
                     <a target="_blank"><button class="btn" id="download-Resume"> Download Resume <i class="fas fa-download"></i></button></a>
-                    <a href="downloads/Hamish Getty's Resume.pdf" target="_blank" class="inline-link">View Resume<i class="fas fa-external-link-alt"></i></a>
+                    <a href="downloads/Hamish Getty's CV.pdf" target="_blank" class="inline-link">View Resume<i class="fas fa-external-link-alt"></i></a>
                 </div>
 
             </div>
@@ -166,39 +170,52 @@
 
         <div class="box-container">
 
-            <div class="box" data-category="apps">
+            <!-- Livestock Management System -->
+            <div class="box" data-category="apps" data-order="2">
                 <a href="#project-1">
                     <img src="images/portfolio-img-1.png">
                 </a>
             </div>
 
-            <div class="box" data-category="websites">
+            <!-- Starlight Space Journeys -->
+            <div class="box" data-category="websites" data-order="5">
                 <a href="#project-2">
                     <img src="images/portfolio-img-2.png">
                 </a>
             </div>
 
-            <div class="box" data-category="websites">
+            <!-- Zumba Co. -->
+            <div class="box" data-category="websites" data-order="4">
                 <a href="#project-3">
                     <img src="images/portfolio-img-3.png">
                 </a>
             </div>
 
-            <div class="box" data-category="apps">
+            <!-- ATM Machine -->
+            <div class="box" data-category="apps" data-order="7">
                 <a href="#project-4">
                     <img src="images/portfolio-img-4.png">
                 </a>
             </div>
 
-            <div class="box" data-category="websites">
+            <!-- Simply Midwifery -->
+            <div class="box" data-category="websites" data-order="1">
                 <a href="#project-5">
                     <img src="images/portfolio-img-5.png">
                 </a>
             </div>
 
-            <div class="box" data-category="websites">
+            <!-- Style Supreme -->
+            <div class="box" data-category="websites" data-order="3">
                 <a href="#project-6">
                     <img src="images/portfolio-img-6.png">
+                </a>
+            </div>
+
+            <!-- Word Data Manager -->
+            <div class="box" data-category="apps" data-order="6">
+                <a href="#project-7">
+                    <img src="images/portfolio-img-7.png">
                 </a>
             </div>
 
@@ -438,7 +455,7 @@
                 <div class="slides-project-5">
                     <img src="images/project-5-img-3.png" style="width:100%">
                 </div>
-              
+                
                 <a class="prev" onclick="plusSlides(-1, 3)">&#10094;</a>
                 <a class="next" onclick="plusSlides(1, 3)">&#10095;</a>
 
@@ -455,10 +472,11 @@
                         <li>PHP Review System: A review system that allows users to provide feedback and ratings for the services offered. The system includes features such as user authentication, submission validation, and display of average ratings.</li>
                     </ul>
                 </h3>
-                <h3> <span> Languages : </span> PHP, HTML, CSS, JavaScript </h3>
+                <h3> <span> Languages : </span> PHP, HTML, CSS, JS </h3>
                 <h3> <span> Platform : </span> Web Browser </h3>
+
                 <div class="button-link">
-                    <a href="http://simplymidwifery.free.nf/" target="_blank" class="inline-link">Visit Site<i class="fas fa-external-link-alt"></i></a>
+                    <a href="https://simplymidwifery.co.nz" target="_blank" class="inline-link">Visit Site<i class="fas fa-external-link-alt"></i></a>
                 </div>
             </div>
         </div>
@@ -517,6 +535,35 @@
         </div>
 
     </section>
+
+    <section class="project" id="project-7">
+
+        <h1 class="heading">Word Data Manager</h1>
+
+        <div class="box-container">
+
+            <div class="info">
+                <h3> <span> About : </span>This console program, Word Data Manager, is designed to efficiently store and manage words from files using two distinct data structures: Dictionary and Node Array. </h3>
+                <h3> <span> Features : </span>
+                    <ul>
+                        <li>Load File: Insert words from a selected file into a dictionary or node array.</li>
+                        <li>Insert Word: Add new words to the dictionary, avoiding duplicates.</li>
+                        <li>Find Word: Search for a specific word within the dictionary and retrieve its details.</li>
+                        <li>Delete: Choose to remove a particular word or clear the entire dictionary (caution: irreversible).</li>
+                        <li>Sort using Bubble Sort / O(n^2): Arrange words in the node array using the Bubble Sort algorithm.</li>
+                        <li>Sort using Quick Sort / O(nlogn): Arrange words in the node array using the Quick Sort algorithm.</li>
+                        <li>Print Operations: Display information about the dictionary or node array and the current sorting method.</li>
+                    </ul>
+                </h3>
+                <h3> <span> Languages : </span> <span id="languages-Word-Data-Manager" style="color: #fff; padding: 0;"></span> </h3>
+                <h3> <span> Platform : </span> Windows </h3>
+                <h3> <span> Last Updated : </span> <span id="last-updated-Word-Data-Manager" style="color: #fff; padding: 0;"></span></h3>
+                <a href="https://github.com/Tipzilla/Word-Data-Manager" target="_blank"><button class="btn"> Download <i class="fas fa-download"></i></button></a>
+            </div>
+            
+        </div>
+        
+    </section>
 <!----- contact section ----->
     <section class="contact" id="contact">
 
@@ -558,6 +605,7 @@
                     <option value="ATM Machine">ATM Machine</option>
                     <option value="Simply Midwifery">Simply Midwifery</option>
                     <option value="Style Savvy">Style Savvy</option>
+                    <option value="Word Data Manager">Word Data Manager</option>
                     <option value="Other">Other</option>
                     <!-- Add more options as needed -->
                 </select>

@@ -86,7 +86,6 @@ let slideIndex = [1, 1, 1, 1, 1];
 // IDs of the HTML elements for each slideshow
 let slideId = ["slides-project-1", "slides-project-2", "slides-project-3", "slides-project-5", "slides-project-6"]; 
 
-// Initialize and display the first slide for each slideshow
 // Initialize and display the first slide for the first slideshow
 showSlides(1, 0); 
 // Initialize and display the first slide for the second slideshow
@@ -213,7 +212,7 @@ document.getElementById("download-ATM-Machine").addEventListener("click", functi
 // Add a click event listener to the element with the ID "download-Resume"
 document.getElementById("download-Resume").addEventListener("click", function() {
     // Define the file URL you want to download
-    const fileURL = "downloads/Hamish Getty's Resume.pdf";
+    const fileURL = "downloads/Hamish Getty's CV.pdf";
   
     // Create an anchor element
     const anchor = document.createElement("a");
@@ -236,8 +235,8 @@ document.addEventListener("DOMContentLoaded", function () {
     { repo: 'LMS-GUI-App' },
     { repo: 'Starlight-Space-Journeys' },
     { repo: 'Zumba-Co' },
-    { repo: 'Simply-Midwifery' },
     { repo: 'Style-Supreme' },
+    { repo: 'Word-Data-Manager' },
     // Add more as needed
   ];
 
@@ -250,10 +249,18 @@ document.addEventListener("DOMContentLoaded", function () {
     const lastUpdatedElement = document.getElementById(`last-updated-${repoName}`);
     const languagesElement = document.getElementById(`languages-${repoName}`);
 
-    // Use the GitHub API to get information about the repository
-    fetch(`https://api.github.com/repos/tipzilla/${repoName}/languages`)
-      .then(response => response.json())
-      .then(data => {
+    // Define your GitHub personal access token
+
+    // * Cannot do this until I move the portfolio to it's own domain as exposing the token is a security vulnerability (update HTML too): *
+
+    const accessToken = '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';
+
+    // Use the GitHub API to get information about the repository, include the access token in the headers
+    fetch(`https://api.github.com/repos/tipzilla/${repoName}/languages`, {
+
+      })
+        .then(response => response.json())
+        .then(data => {
         // Calculate the total byte size of the project
         const totalSize = Object.values(data).reduce((acc, size) => acc + size, 0);
 
@@ -271,10 +278,12 @@ document.addEventListener("DOMContentLoaded", function () {
         languagesElement.textContent = 'Error fetching languages';
       });
 
-    // Fetch and display the last updated date similarly
-    fetch(`https://api.github.com/repos/tipzilla/${repoName}`)
-      .then(response => response.json())
-      .then(data => {
+      // Fetch and display the last updated date similarly, include the access token in the headers
+      fetch(`https://api.github.com/repos/tipzilla/${repoName}`, {
+
+      })
+        .then(response => response.json())
+        .then(data => {
         const lastCommitDate = new Date(data.updated_at);
 
         // Format the date as "Month Day, Year"
@@ -291,5 +300,35 @@ document.addEventListener("DOMContentLoaded", function () {
         console.error(`Error fetching data for ${repoName}: ${error.message}`);
         lastUpdatedElement.textContent = 'Error fetching last updated date';
       });
+  });
+});
+
+// --- Function for sorting the projects in a specified order --- //
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Wait for the DOM content to be fully loaded
+
+  // Find the portfolio section
+  var portfolioSection = document.querySelector(".portfolio");
+
+  // Find the box container within the portfolio section
+  var boxContainer = portfolioSection.querySelector(".box-container");
+
+  // Find all the boxes within the box container
+  var boxes = boxContainer.querySelectorAll(".box");
+
+  // Convert NodeList to array for easier sorting
+  var boxesArray = Array.from(boxes);
+
+  // Sort the array based on the data-order attribute
+  boxesArray.sort(function (a, b) {
+    var orderA = parseInt(a.getAttribute("data-order"));
+    var orderB = parseInt(b.getAttribute("data-order"));
+    return orderA - orderB;
+  });
+
+  // Append the sorted boxes back to the box container
+  boxesArray.forEach(function (box) {
+    boxContainer.appendChild(box);
   });
 });

@@ -244,6 +244,14 @@ header .navbar ul li a:hover {
 .about li {
     color: #eee;
     margin-left: 0.7rem;
+    list-style-type: none;
+    margin-top: 0.3rem;
+    vertical-align: bottom;
+}
+
+.about li img {
+    width: 3%;
+    vertical-align: bottom;
 }
 
 .about .row .counter {
