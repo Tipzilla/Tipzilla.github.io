@@ -212,7 +212,7 @@ document.getElementById("download-ATM-Machine").addEventListener("click", functi
 // Add a click event listener to the element with the ID "download-Resume"
 document.getElementById("download-Resume").addEventListener("click", function() {
     // Define the file URL you want to download
-    const fileURL = "downloads/Hamish Getty's CV.pdf";
+    const fileURL = "downloads/Hamish Getty's Resume.pdf";
   
     // Create an anchor element
     const anchor = document.createElement("a");
@@ -221,7 +221,7 @@ document.getElementById("download-Resume").addEventListener("click", function() 
     anchor.href = fileURL;
   
     // Set the 'download' attribute to specify the filename when the user downloads the file
-    anchor.download = "Hamish Getty's CV.pdf";
+    anchor.download = "Hamish Getty's Resume.pdf";
   
     // Simulate a click event on the anchor element, triggering the download action
     anchor.click();
